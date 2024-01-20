@@ -4,15 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Bin Mansur - Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Add your styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #030303; /* Dark background color */
+            color: #771717; /* Light text color */
+        }
+
+        header {
+            background-color: #080202;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        header h2 {
+            color: #ecedee; /* Light grey text color */
+        }
+
+        .social-icons a {
+            color: #ecedee; /* Light grey text color */
+            font-size: 24px; /* Increase icon size. Adjust the value as needed. */
+            margin: 0 10px; /* Add margin for spacing between icons */
+        }
+
+        .social-icons a:hover {
+            color: #0ea8a8; /* Slightly darker grey on hover */
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 15px;
+        }
+
+        section {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 10px;
+            text-align: left;
+            padding: 15px; /* Add padding for a cleaner look */
+            background-color: #f0f0f0; /* Light grey backdrop */
+            border-radius: 10px; /* Rounded corners */
+            border: 2px solid #d0d0d0; /* Light grey border */
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust the gap between projects */
+            justify-content: space-around;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        .project {
+            width: 250px; /* Adjust the width of the project card */
+            padding: 10px;
+            background-color: #fff; /* White canvas */
+            border: 1px solid #d0d0d0; /* Light grey border */
+            border-radius: 8px; /* Rounded corners */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        }
+
+        h2, h3 {
+            color: #333; /* Dark text color */
+        }
+
+        p {
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Ibrahim Bin Mansur</h1>
-        <p>Email: ibrahimmansur4@gmail.com | Phone: +923112325007 | Location: Islamabad, Pakistan</p>
+        <h2>Connect with Me</h2>
+        <div class="social-icons">
+            <a href="https://github.com/ibrahimmansur4" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ibrahimmansur4@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>    
     </header>
 
     <nav>
@@ -24,24 +122,49 @@
     <section>
         <h2>Projects</h2>
 
-        <h3>Project Title 1</h3>
-        <p>
-            Description of the project. Include details such as technologies used, your role, and any
-            significant achievements or outcomes.
-            <br>
-            Links: [Link 1], [Link 2]
-        </p>
+        <div class="project-container">
+            <div class="project">
+                <h3>ESP32 Web Server with FreeRTOS</h3>
+                <p>
+                    This project implements a web server on the ESP32 platform, utilizing FreeRTOS for efficient task management.
+                    The server is designed to handle tasks such as reading sensor data, updating a display, and responding to emergency situations.
+                </p>
+                <h4>Project Description</h4>
+                <p>
+                    The ESP32 Web Server with FreeRTOS project focuses on creating a reliable and responsive web server for the ESP32 microcontroller.
+                    My role in the project involved designing and implementing tasks using FreeRTOS to efficiently manage sensor data, display updates,
+                    and emergency response mechanisms. Key technologies used include the Arduino IDE, ESP32 platform, FreeRTOS, C++, HTML, CSS, and JavaScript.
+                    The server communicates with IoT devices and provides a web-based interface for monitoring and control.
+                </p>
+                <p>
+                    <strong>Technologies Used:</strong> ESP32, FreeRTOS, C++, HTML, CSS, JavaScript, IoT
+                </p>
+                <img src="Images/Screenshot from 2024-01-20 15-50-14.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
+                <a href="https://github.com/ESP32-Work/Embedded-Systems-Semester-Project" target="_blank">GitHub Repo</a>
+            </div>
 
-        <h3>Project Title 2</h3>
-        <p>
-            Description of the project. Include details such as technologies used, your role, and any
-            significant achievements or outcomes.
-            <br>
-            Links: [Link 1], [Link 2]
-        </p>
+            <div class="project">
+                <h3>RF Communication with ESP32</h3>
+                    <p>
+                        This project demonstrates how to establish RF (Radio Frequency) communication between two ESP32 devices using the RadioHead library.
+                        It consists of both a transmitter and a receiver module for wireless data transmission.
+                    </p>
+                    <h4>Project Description</h4>
+                    <p>
+                        The RF Communication with ESP32 project showcases the implementation of wireless communication between ESP32 devices using the RadioHead library.
+                        The project includes both transmitter and receiver modules for bidirectional data transmission. The RadioHead library is employed for encoding
+                        and decoding data, supporting various RF transceivers. This project is an excellent example of practical IoT communication.
+                    </p>
+                    <p>
+                        <strong>Technologies Used:</strong> ESP32, RadioHead Library
+                    </p>
+                    <img src="Images/WhatsApp Image 2024-01-20 at 15.58.01.jpeg" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
+                <a href="https://github.com/ESP32-Work/RF-Transmitter-Reciever" target="_blank">GitHub Repo</a>
+            </div>
 
-        <!-- Add more projects as needed -->
+            <!-- Add more projects as needed -->
 
+        </div>
     </section>
 
 </body>
