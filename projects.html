@@ -65,7 +65,7 @@
 
         section {
             flex: 1;
-            max-width: 600px;
+            max-width: auto;
             margin-right: 10px;
             text-align: left;
             padding: 15px; /* Add padding for a cleaner look */
@@ -83,6 +83,7 @@
         }
 
         .project {
+            flex: 1; /* Adjust this to change the project card width */
             width: 250px; /* Adjust the width of the project card */
             padding: 10px;
             background-color: #fff; /* White canvas */
@@ -160,6 +161,25 @@
                     </p>
                     <img src="Images/WhatsApp Image 2024-01-20 at 15.58.01.jpeg" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
                 <a href="https://github.com/ESP32-Work/RF-Transmitter-Reciever" target="_blank">GitHub Repo</a>
+            </div>
+
+            <div class="project">
+                <h3>Text Recognition using ESP32-CAM and OCR</h3>
+                <p>
+                    This project utilizes an ESP32-CAM module to capture images, perform Optical Character Recognition (OCR) using Tesseract, and display the live stream with extracted text. 
+                    The ESP32-CAM serves the images through a local web server, and a Python script on the client side processes the stream for text extraction.
+                </p>
+                <h4>Project Description</h4>
+                <p>
+                    The project requires an ESP32-CAM module, Arduino IDE or PlatformIO extension for VS Code, Python, Tesseract OCR, and OpenCV library for Python. 
+                    The Arduino code configures the ESP32-CAM, sets up a web server, and handles different image resolutions. The Python script reads the live stream from the ESP32-CAM, performs OCR using Tesseract, and displays the stream with extracted text using OpenCV.
+                </p>
+                <p>
+                    <strong>Technologies Used:</strong> ESP32-CAM, PlatformIO, Python, Tesseract OCR, OpenCV
+                </p>
+                <!-- Add your project image here -->
+                <img src="Images/Screenshot from 2024-01-24 17-37-07.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
+                <a href="https://github.com/ESP32-Work/Text-Recognition-ESP32-CAM" target="_blank">GitHub Repo</a>
             </div>
 
             <!-- Add more projects as needed -->

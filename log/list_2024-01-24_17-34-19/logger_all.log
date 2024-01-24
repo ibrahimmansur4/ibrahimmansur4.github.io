@@ -1,0 +1,40 @@
+[3.964s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/ibrahim/ibrahimmansur4.github.io']
+[3.964s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/ibrahim/ibrahimmansur4.github.io'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72e179faf280>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x72e179f587f0>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x72e179f587f0>>)
+[4.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.107s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ibrahim/ibrahimmansur4.github.io'
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['ignore', 'ignore_ament_install']
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'ignore'
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'ignore_ament_install'
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['colcon_pkg']
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'colcon_pkg'
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['colcon_meta']
+[4.107s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'colcon_meta'
+[4.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['ros']
+[4.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'ros'
+[4.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['cmake', 'python']
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'cmake'
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'python'
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extensions ['python_setup_py']
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io) by extension 'python_setup_py'
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['ignore', 'ignore_ament_install']
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'ignore'
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'ignore_ament_install'
+[4.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['colcon_pkg']
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'colcon_pkg'
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['colcon_meta']
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'colcon_meta'
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['ros']
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'ros'
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['cmake', 'python']
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'cmake'
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'python'
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extensions ['python_setup_py']
+[4.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/Images) by extension 'python_setup_py'
+[4.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/log) by extensions ['ignore', 'ignore_ament_install']
+[4.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/log) by extension 'ignore'
+[4.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ibrahim/ibrahimmansur4.github.io/log) ignored
+[4.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
