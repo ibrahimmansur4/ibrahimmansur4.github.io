@@ -22,6 +22,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        animation: fadeInUp 0.8s ease-out; /* Apply fade-in animation */
     }
 
     header h1 {
@@ -127,12 +128,13 @@
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
-    }
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s; /* Add transitions for smoother effects */
+    }   
 
     .project:hover {
-        transform: translateY(-5px); /* Slight elevation on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight elevation on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    opacity: 0.9; /* Reduce opacity slightly on hover */
     }
 
     h2, h3 {
@@ -143,9 +145,17 @@
         line-height: 1.6;
     }
 
-    /* Add a class to apply the sliding effect */
+    /* Add animation for sliding effect */
     .sliding-effect {
-        transition: transform 0.3s ease; /* Adjust the transition duration and easing as needed */
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide-left {
+        transform: translateX(-100%);
+    }
+
+    .slide-right {
+        transform: translateX(100%);
     }
     /* Add styles for navigation buttons */
     .nav-buttons {
@@ -168,7 +178,17 @@
         cursor: pointer;
         outline: none;
     }
-    
+    /* Define keyframe for fade-in animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     </style>
 </head>
