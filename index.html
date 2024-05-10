@@ -316,6 +316,11 @@
                 transform: translateY(-100%);
             }
         }
+        .scene {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
         .robot {
             width: 120px;
             height: 60px;
@@ -385,42 +390,95 @@
             transform-origin: left center;
             animation: rotateArmSegment 2s infinite alternate;
         }
+        .package {
+            width: 20px;
+            height: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: placePackage 5s linear forwards, resetPackage 10s linear infinite;
+            animation-delay: 5s, 5s;
+        }
+
+        .box {
+            width: 60px;
+            height: 40px;
+            background-color: var(--primary-color);
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes placePackage {
+            0% {
+                transform: translateX(-50%);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            100% {
+                transform: translateX(calc(100vw - 90px)) translateY(0);
+            }
+        }
+
+        @keyframes resetPackage {
+            0% {
+                transform: translateX(calc(100vw - 90px)) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+
 
         @keyframes moveRobot {
             0% {
                 left: 0;
             }
+            50% {
+                left: calc(100% - 180px);
+            }
             100% {
-                left: calc(100% - 120px);
+                left: calc(100% - 180px);
             }
         }
 
-    @keyframes rotateTire {
-        from {
-            transform: rotate(0deg);
+        @keyframes rotateTire {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        to {
-            transform: rotate(360deg);
-        }
-    }
 
-    @keyframes moveRoboticArm {
-        0% {
-            transform: translateX(-50%) translateY(0);
+        @keyframes moveRoboticArm {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-20px);
+            }
         }
-        100% {
-            transform: translateX(-50%) translateY(-20px);
-        }
-    }
 
-    @keyframes rotateArmSegment {
-        0% {
-            transform: rotate(0deg);
+        @keyframes rotateArmSegment {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
         }
-        100% {
-            transform: rotate(45deg);
-        }
-    }
     </style>
 </head>
 <body class="scroll-snap">
@@ -503,15 +561,20 @@
     <!-- Animated lines -->
     <div class="left-animation"></div>
     <div class="right-animation"></div>
-    <div class="robot">
-        <div class="car-body">
-            <div class="robotic-arm">
-                <div class="arm-base"></div>
-                <div class="arm-joint"></div>
-                <div class="arm-segment"></div>
+    <div class="scene">
+        <div class="robot">
+            <div class="car-body">
+                <div class="tire tire-left"></div>
+                <div class="tire tire-right"></div>
+                <div class="robotic-arm">
+                    <div class="arm-base"></div>
+                    <div class="arm-joint"></div>
+                    <div class="arm-segment">
+                        <div class="package"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="tire tire-left"></div>
-        <div class="tire tire-right"></div>
     </div>
+    <div class="box"></div>
 </body> </html> 
