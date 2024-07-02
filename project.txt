@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Bin Mansur - Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<header>
+    <h1>Ibrahim Bin Mansur</h1>
+    <h2>Connect with Me</h2>
+    <div class="social-icons">
+        <a href="https://github.com/ibrahimmansur4" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ibrahimmansur4@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div> 
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="https://drive.google.com/file/d/1PK9Qu11d1pPf1e30LXiH2dsta1PRyFAH/view?usp=sharing">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+</nav>
+
+<section>
+    <h2>Projects</h2>
+    
+    <div class="project-container sliding-effect">
+        <!-- ESP32 Web Server with FreeRTOS -->
+        <div class="project">
+            <h3>ESP32 Web Server with FreeRTOS</h3>
+            <p>This project implements a web server on the ESP32 platform, utilizing FreeRTOS for efficient task management. The server is designed to handle tasks such as reading sensor data, updating a display, and responding to emergency situations.</p>
+            <h4>Project Description</h4>
+            <p>The ESP32 Web Server with FreeRTOS project focuses on creating a reliable and responsive web server for the ESP32 microcontroller. My role in the project involved designing and implementing tasks using FreeRTOS to efficiently manage sensor data, display updates, and emergency response mechanisms. Key technologies used include the Arduino IDE, ESP32 platform, FreeRTOS, C++, HTML, CSS, and JavaScript. The server communicates with IoT devices and provides a web-based interface for monitoring and control.</p>
+            <p><strong>Technologies Used:</strong> ESP32, FreeRTOS, C++, HTML, CSS, JavaScript, IoT</p>
+            <img src="Images/Screenshot from 2024-01-20 15-50-14.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">
+            <a href="https://github.com/ESP32-Work/Embedded-Systems-Semester-Project" target="_blank">GitHub Repo</a>
+        </div>
+        
+        <!-- RF Communication with ESP32 -->
+        <div class="project">
+            <h3>RF Communication with ESP32</h3>
+            <p>This project demonstrates how to establish RF (Radio Frequency) communication between two ESP32 devices using the RadioHead library. It consists of both a transmitter and a receiver module for wireless data transmission.</p>
+            <h4>Project Description</h4>
+            <p>The RF Communication with ESP32 project showcases the implementation of wireless communication between ESP32 devices using the RadioHead library. The project includes both transmitter and receiver modules for bidirectional data transmission. The RadioHead library is employed for encoding and decoding data, supporting various RF transceivers. This project is an excellent example of practical IoT communication.</p>
+            <p><strong>Technologies Used:</strong> ESP32, RadioHead Library</p>
+            <img src="Images/WhatsApp Image 2024-01-20 at 15.58.01.jpeg" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
+            <a href="https://github.com/ESP32-Work/RF-Transmitter-Reciever" target="_blank">GitHub Repo</a>
+        </div>
+
+        <!-- Text Recognition using ESP32-CAM and OCR -->
+        <div class="project">
+            <h3>Text Recognition using ESP32-CAM and OCR</h3>
+            <p>This project utilizes an ESP32-CAM module to capture images, perform Optical Character Recognition (OCR) using Tesseract, and display the live stream with extracted text. The ESP32-CAM serves the images through a local web server, and a Python script on the client side processes the stream for text extraction.</p>
+            <h4>Project Description</h4>
+            <p>The project requires an ESP32-CAM module, Arduino IDE or PlatformIO extension for VS Code, Python, Tesseract OCR, and OpenCV library for Python. The Arduino code configures the ESP32-CAM, sets up a web server, and handles different image resolutions. The Python script reads the live stream from the ESP32-CAM, performs OCR using Tesseract, and displays the stream with extracted text using OpenCV.</p>
+            <p><strong>Technologies Used:</strong> ESP32-CAM, PlatformIO, Python, Tesseract OCR, OpenCV</p>
+            <img src="Images/Screenshot from 2024-01-24 17-37-07.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
+            <a href="https://github.com/ESP32-Work/Text-Recognition-ESP32-CAM" target="_blank">GitHub Repo</a>
+        </div>
+
+        <!-- Human-Object Interaction Detection (HOID) -->
+        <div class="project">
+            <h3>Human-Object Interaction Detection (HOID)</h3>
+            <p>Explore the world of computer vision with the Human-Object Interaction Detection (HOID) project. This initiative focuses on developing a robust Convolutional Neural Network (CNN) for precisely detecting human-object interactions in images.</p>
+            <h4>Project Description</h4>
+            <p>Leveraging advanced computer vision and deep learning techniques, the model is meticulously trained on a curated dataset. This dataset is extracted from videos capturing scenarios with and without interactions, ensuring a comprehensive understanding of real-world scenarios.</p>
+            <p>The CNN's architecture is carefully designed, featuring convolutional layers, batch normalization, and dense layers. This emphasis on both accuracy and interpretability ensures the model's effectiveness in a variety of applications. Extensive data augmentation techniques further enhance the model's generalization across diverse real-world scenarios.</p>
+            <p><strong>Technologies Used:</strong> OpenCV, Machine Learning, CNN, Python3, Keras-TensorFlow</p>
+            <img src="Images/videoframe_2854.png" alt="Project Image 2" style="max-width: 100%;">
+            <a href="https://github.com/ibrahimmansur4/HOID" class="button" target="_blank">GitHub Repo</a>
+        </div>
+
+        <!-- Landmark-based Localization for Indoor Delivery Robot -->
+        <div class="project">
+            <h3>Landmark-based Localization for Indoor Delivery Robot</h3>
+            <p>This project focuses on developing a localization system for indoor mobile robots using landmarks or beacons. The system utilizes active or passive landmarks installed in the environment that transmit signals, which are received by the robot. By triangulating the signals received from multiple landmarks, the robot can determine its position within the indoor environment.</p>
+            <h4>Project Description</h4>
+            <p>Indoor localization using beacons or landmarks finds a wide range of applications, particularly for mobile robots that need to operate within the same indoor environment for extended periods. Examples include robots working in large warehouses, indoor shopping malls, and office spaces. The landmark-based localization system relies on active or passive landmarks installed in the environment, transmitting signals that are received by the robots. Signals received from multiple landmarks help the robots find their position using triangulation.</p>
+            <p>This project aims to develop a localization system for the SEECS faculty block, utilizing the PIONEER P3-DX mobile robot already available in the ROMI Lab. The project involves implementing algorithms for signal processing, triangulation, and robot navigation based on the received landmark signals.</p>
+            <p><strong>Technologies Used:</strong> ROS, C++, Python, QT, OpenCV, Gazebo, ESP32-CAM, Linux</p>
+            <img src="Images/Screenshot from 2024-04-23 15-30-39.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">
+            <a href="https://github.com/ibrahimmansur4/Landmark-based-Localization-for-Indoor-Delivery-Robot" target="_blank">GitHub Repo</a>
+        </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <button class="nav-button" onclick="scrollProjects('left')">&#9665;</button>
+        <button class="nav-button" onclick="scrollProjects('right')">&#9655;</button>
+    </div>
+</section>
+
+<script>
+    // Get the project container
+    const projectContainer = document.querySelector('.project-container');
+
+    // Variables to track touch movement
+    let isTouchStart = false;
+    let startX;
+    let scrollLeft;
+
+    // Add touch event listeners
+    projectContainer.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            isTouchStart = true;
+            startX = e.touches[0].pageX - projectContainer.offsetLeft;
+            scrollLeft = projectContainer.scrollLeft;
+        }
+    });
+
+    projectContainer.addEventListener('touchmove', (e) => {
+        if (!isTouchStart || e.touches.length !== 2) return;
+        e.preventDefault();
+
+        const x = e.touches[0].pageX - projectContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust the multiplier as needed
+        projectContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    projectContainer.addEventListener('touchend', () => {
+        isTouchStart = false;
+    });
+
+    // Function to scroll projects based on button click
+    function scrollProjects(direction) {
+        const step = 250; // Adjust the step size as needed
+        if (direction === 'left') {
+            projectContainer.scrollLeft -= step;
+        } else if (direction === 'right') {
+            projectContainer.scrollLeft += step;
+        }
+    }
+</script>
+
+</body>
+</html>
