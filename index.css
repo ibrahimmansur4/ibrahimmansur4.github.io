@@ -10,24 +10,27 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 header {
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
     color: #fff;
     margin-bottom: 10px;
-    font-size: calc(1.5rem + 2vw); /* Dynamic heading size */
+    font-size: calc(2rem + 2vw); /* Increased size for better visibility */
 }
 
 header p {
     color: #f0f0f0;
     margin: 0;
+    font-size: calc(0.8rem + 0.5vw);
 }
 
 nav {
@@ -41,7 +44,9 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease-in-out;
 }
 
 nav a {
@@ -65,6 +70,7 @@ section {
     background-color: #1e2a38;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 img {
@@ -81,9 +87,11 @@ h1, h2, p {
     color: var(--secondary-color);
 }
 
-ul {
+nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 li {
@@ -170,6 +178,7 @@ a:hover {
     justify-content: space-between;
     flex-direction: column-reverse; /* Change flex direction for better mobile view */
     text-align: center;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .hero-text {
@@ -197,6 +206,11 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.get-in-touch:hover {
+    background-color: #007bbb;
 }
 
 .hero-image {
@@ -239,7 +253,6 @@ a:hover {
     font-size: 1rem;
     margin-bottom: 20px;
 }
-
 
 .btn {
     display: inline-block;
@@ -327,6 +340,7 @@ a:hover {
         }
     }
 }
+
 .left-animation {
     position: fixed;
     left: 0;
@@ -374,11 +388,13 @@ a:hover {
         transform: translateY(-100%);
     }
 }
+
 .scene {
     position: relative;
     height: 200px;
     overflow: hidden;
 }
+
 .robot {
     width: 120px;
     height: 60px;
@@ -448,6 +464,7 @@ a:hover {
     transform-origin: left center;
     animation: rotateArmSegment 2s infinite alternate;
 }
+
 .package {
     width: 20px;
     height: 20px;
@@ -482,9 +499,6 @@ a:hover {
     }
 }
 
-
-
-
 @keyframes resetPackage {
     0% {
         transform: translateX(calc(100vw - 90px)) translateY(0);
@@ -496,8 +510,6 @@ a:hover {
         transform: translateX(-50%) translateY(0);
     }
 }
-
-
 
 @keyframes moveRobot {
     0% {
@@ -538,3 +550,51 @@ a:hover {
     }
 }
 
+.project-card {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #333;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #005a85;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

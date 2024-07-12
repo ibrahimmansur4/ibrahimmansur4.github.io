@@ -1,25 +1,28 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #ff9800; /* Accent color */
 }
 
 header h2 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    color: #ff9800; /* Accent color */
 }
 
 .social-icons {
@@ -27,7 +30,7 @@ header h2 {
 }
 
 .social-icons a {
-    color: white;
+    color: #ff9800; /* Accent color */
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
@@ -36,46 +39,73 @@ header h2 {
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: #444;
+    background-color: #292929;
     padding: 10px 0;
 }
 
 .navbar a {
-    color: white;
+    color: #e0e0e0;
     margin: 0 15px;
     text-decoration: none;
     font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff9800; /* Accent color */
 }
 
 section {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #1f1f1f;
+    border-radius: 10px;
 }
-
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #ff9800; /* Accent color */
 }
 
 .project-container {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .project {
-    background-color: white;
+    background-color: #292929;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     flex: 0 0 300px;
-    margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin: 10px 0;
+}
+
+.project a {
+    color: #1e90ff; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #ff6347; /* Hover color */
 }
 
 .nav-buttons {
@@ -85,11 +115,23 @@ h2 {
 }
 
 .nav-button {
-    background-color: #333;
-    color: white;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ff9800; /* Accent color */
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 0 0 100%;
+    }
 }
