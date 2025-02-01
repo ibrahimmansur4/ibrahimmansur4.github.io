@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Work Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4CAF50;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px 20px;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #4CAF50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #4CAF50;
+            border: 4px solid #1c1c1c;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .date {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .work-type {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+
+        .company {
+            color: #aaa;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .details {
+            margin-top: 15px;
+        }
+
+        .details ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .details li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .skills {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background-color: #444;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.8em;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container.right {
+                left: 0%;
+            }
+
+            .container.left::after,
+            .container.right::after {
+                left: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="https://drive.google.com/file/d/1zSwYZCpfS5ZoDvH20cMcYIgGIOqppnVf/view?usp=sharing">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://ibrahimmansur4.medium.com/">Blog</a>
+        <a href="cv.html">CV</a>
+    </nav>
+
+    <div class="timeline">
+        <div class="container right">
+            <div class="content">
+                <div class="date">June 2024 - Present</div>
+                <h3>Embedded and IoT Associate Engineer</h3>
+                <div class="company">KytherTek</div>
+                <span class="work-type">Full-time</span>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan · Hybrid</div>
+                <div class="details">
+                    <ul>
+                        <li>Developed a mobile notification system for water tank monitoring in homes</li>
+                        <li>Rolled out updated versions of the ezgeyser gas, electric and hybrid devices for improved efficiency</li>
+                        <li>Lead the final testing phase for the electric and hybrid versions of the ezgeyser device</li>
+                        <li>Added a complete webserver for local connections with mdns support</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <span class="skill-tag">IoT</span>
+                    <span class="skill-tag">Webserver</span>
+                    <span class="skill-tag">MDNS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <div class="date">March 2024 - May 2024</div>
+                <h3>Embedded and IoT Engineer</h3>
+                <div class="company">KytherTek</div>
+                <span class="work-type">Part-time</span>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan · On-site</div>
+                <div class="details">
+                    <ul>
+                        <li>Improved development of EzGeyser, transforming traditional water geysers into intelligent, connected appliances</li>
+                        <li>Established and organized company's GitHub account, creating repositories for efficient project management</li>
+                        <li>Drove migration of EzGeyser codebase to FreeRTOS operating system</li>
+                        <li>Handled hardware assembly, component integration, and electrical connection testing</li>
+                        <li>Produced comprehensive technical documentation for the EzGeyser system</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">Soldering</span>
+                    <span class="skill-tag">FreeRTOS</span>
+                    <span class="skill-tag">Hardware Assembly</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <div class="date">July 2023 - September 2023</div>
+                <h3>Summer Intern</h3>
+                <div class="company">Robotisim</div>
+                <span class="work-type">Internship</span>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Jhelum, Pakistan · On-site</div>
+                <div class="details">
+                    <ul>
+                        <li>Developed line-following robot prototype using PID control algorithms and IR sensors</li>
+                        <li>Created mobile app using MIT App Inventor for ESP32-based camera system</li>
+                        <li>Integrated AS5600 encoders and IMU sensors with microROS implementation</li>
+                        <li>Collaborated on programming mobile robots and implementing ESP32 cam for security wifi</li>
+                        <li>Utilized GitHub, VS Code, and Linux Ubuntu for development</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <span class="skill-tag">CMake</span>
+                    <span class="skill-tag">microROS</span>
+                    <span class="skill-tag">ROS</span>
+                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">PID</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Gazebo</span>
+                    <span class="skill-tag">Rviz</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <div class="date">June 2023 - July 2023</div>
+                <h3>Summer Intern</h3>
+                <div class="company">WAPDA</div>
+                <span class="work-type">Internship</span>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Muzaffarabad, Azad Kashmir, Pakistan · On-site</div>
+                <div class="details">
+                    <ul>
+                        <li>Worked in P&I section (Protection and Instrumentation)</li>
+                        <li>Handled sensor installation and PLC readings in control units</li>
+                        <li>Gained experience with SCADA system implementation and operation</li>
+                        <li>Learned about industrial control systems and power plant operations</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <span class="skill-tag">Line Drawing</span>
+                    <span class="skill-tag">SCADA</span>
+                    <span class="skill-tag">PLC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
