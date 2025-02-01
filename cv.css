@@ -1,0 +1,153 @@
+/* Gradient Cards Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1c2c 0%, #2a3045 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a:hover {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: #ffffff;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.container {
+    margin-bottom: 3rem;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.date {
+    color: #FF6B6B;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin: 0 0 0.75rem 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.company {
+    color: #4ECDC4;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.work-type {
+    display: inline-block;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: #ffffff;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.location {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin: 1rem 0;
+}
+
+.details ul {
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.details li {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+.skills {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #4ECDC4;
+    padding: 0.35rem 1rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(78, 205, 196, 0.1);
+    border-color: #4ECDC4;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        padding: 0 1rem;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+}
