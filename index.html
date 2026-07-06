@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <script src="js/main.js" defer></script>
+    <script src="js/robot-scene.js" defer></script>
 </head>
 <body>
     <nav class="site-nav">
@@ -94,9 +95,30 @@
                     </div>
                 </div>
 
-                <!-- signature robot animation -->
-                <div class="robot-scene reveal" aria-hidden="true">
-                    <div class="robot">
+                <!-- signature robot playground -->
+                <div class="robot-scene reveal" id="robotScene" tabindex="0" role="application"
+                     aria-label="Interactive robot playground. Click to take control, then drive the rover with the left and right arrow keys and press space to pick up or drop the package.">
+                    <div class="drone drone-a" aria-hidden="true">
+                        <span class="prop prop-l"></span>
+                        <span class="prop prop-r"></span>
+                        <span class="drone-body"></span>
+                        <span class="drone-led"></span>
+                    </div>
+                    <div class="drone drone-b" aria-hidden="true">
+                        <span class="prop prop-l"></span>
+                        <span class="prop prop-r"></span>
+                        <span class="drone-body"></span>
+                        <span class="drone-led"></span>
+                    </div>
+                    <div class="humanoid" aria-hidden="true">
+                        <span class="h-head"></span>
+                        <span class="h-torso"></span>
+                        <span class="h-arm h-arm-l"></span>
+                        <span class="h-arm h-arm-r"></span>
+                        <span class="h-leg h-leg-l"></span>
+                        <span class="h-leg h-leg-r"></span>
+                    </div>
+                    <div class="rover" id="rover" aria-hidden="true">
                         <div class="robot-arm">
                             <div class="arm-segment"></div>
                             <div class="arm-joint"></div>
@@ -106,10 +128,19 @@
                             <div class="tire tire-left"></div>
                             <div class="tire tire-right"></div>
                         </div>
-                        <div class="package"></div>
                     </div>
-                    <div class="drop-box"></div>
-                    <div class="scene-floor"></div>
+                    <div class="package" id="package" aria-hidden="true"></div>
+                    <div class="drop-box" id="dropBox" aria-hidden="true"></div>
+                    <div class="scene-floor" aria-hidden="true"></div>
+                    <div class="scene-hud" aria-hidden="true">
+                        <span class="hud-hint" id="hudHint">// autopilot on — click to take control</span>
+                        <span class="hud-score" id="hudScore">delivered: 0</span>
+                    </div>
+                    <div class="scene-controls" id="sceneControls" aria-hidden="true">
+                        <button type="button" data-act="left" tabindex="-1">◀</button>
+                        <button type="button" data-act="grab" tabindex="-1">⇅</button>
+                        <button type="button" data-act="right" tabindex="-1">▶</button>
+                    </div>
                 </div>
             </div>
         </section>

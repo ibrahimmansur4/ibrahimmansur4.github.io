@@ -110,13 +110,6 @@
     to { transform: rotate(-360deg); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .photo-ring,
-    .photo-ring img {
-        animation: none;
-    }
-}
-
 /* ---------- about ---------- */
 
 .about-grid {
@@ -180,16 +173,30 @@
     line-height: 1.5;
 }
 
-/* ---------- robot scene (signature animation) ---------- */
+/* ---------- robot playground (signature interactive scene) ---------- */
 
 .robot-scene {
     position: relative;
-    height: 150px;
+    height: 210px;
     margin-top: 56px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: linear-gradient(180deg, rgba(34, 211, 238, 0.03), transparent);
     overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.robot-scene:hover {
+    border-color: rgba(34, 211, 238, 0.35);
+}
+
+.robot-scene:focus,
+.robot-scene:focus-within {
+    border-color: rgba(34, 211, 238, 0.55);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
+    cursor: default;
 }
 
 .scene-floor {
@@ -201,13 +208,89 @@
     background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.45), transparent);
 }
 
-.robot {
+/* HUD */
+.scene-hud {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.hud-hint {
+    color: var(--accent);
+    opacity: 0.85;
+}
+
+.hud-score {
+    color: var(--muted);
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+/* on-screen controls (always on touch, on hover/focus for pointer devices) */
+.scene-controls {
+    position: absolute;
+    bottom: 34px;
+    right: 14px;
+    display: flex;
+    gap: 8px;
+    z-index: 7;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.robot-scene:hover .scene-controls,
+.robot-scene:focus .scene-controls,
+.robot-scene:focus-within .scene-controls {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .scene-controls {
+        opacity: 1;
+    }
+}
+
+.scene-controls button {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: rgba(10, 15, 30, 0.7);
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    border-radius: 8px;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scene-controls button:hover {
+    background: var(--accent-soft);
+    box-shadow: var(--glow);
+}
+
+/* rover — position driven by js/robot-scene.js */
+.rover {
     position: absolute;
     bottom: 25px;
-    left: 16px;
+    left: 0;
     width: 96px;
     height: 74px;
-    animation: driveRobot 14s ease-in-out infinite;
+    z-index: 4;
+    will-change: transform;
 }
 
 .robot-body {
@@ -248,6 +331,11 @@
     border: 2px solid #2c3a55;
     border-radius: 50%;
     animation: rollTire 1.2s linear infinite;
+    animation-play-state: paused;
+}
+
+.rover.moving .tire {
+    animation-play-state: running;
 }
 
 .tire::after {
@@ -300,16 +388,19 @@
     to { transform: rotate(-70deg); }
 }
 
+/* package — position driven by js/robot-scene.js */
 .package {
     position: absolute;
-    bottom: 44px;
-    left: 40px;
+    bottom: 28px;
+    left: 0;
     width: 18px;
     height: 15px;
     background: var(--accent);
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
-    animation: dropPackage 14s ease-in-out infinite;
+    z-index: 3;
+    transition: opacity 0.4s ease;
+    will-change: transform;
 }
 
 .package::after {
@@ -323,6 +414,7 @@
     background: rgba(10, 15, 30, 0.5);
 }
 
+/* drop box */
 .drop-box {
     position: absolute;
     right: 20px;
@@ -332,34 +424,204 @@
     border: 2px dashed rgba(34, 211, 238, 0.5);
     border-top: none;
     border-radius: 0 0 6px 6px;
+    z-index: 2;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* robot drives right, pauses at the box, drives home */
-@keyframes driveRobot {
-    0%   { transform: translateX(0); }
-    38%  { transform: translateX(calc(min(1100px, 92vw) - 160px)); }
-    55%  { transform: translateX(calc(min(1100px, 92vw) - 160px)); }
-    93%  { transform: translateX(0); }
-    100% { transform: translateX(0); }
+.drop-box.flash {
+    border-color: var(--accent);
+    box-shadow: 0 0 22px rgba(34, 211, 238, 0.65);
+    animation: boxPop 0.5s ease;
 }
 
-/* package rides along, then drops into the box while robot waits */
-@keyframes dropPackage {
-    0%, 38%   { transform: translate(0, 0); opacity: 1; }
-    46%       { transform: translate(52px, 24px); opacity: 1; }
-    50%       { transform: translate(52px, 30px); opacity: 0; }
-    97%       { transform: translate(0, 0); opacity: 0; }
-    100%      { transform: translate(0, 0); opacity: 1; }
+@keyframes boxPop {
+    30% { transform: scale(1.12); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .robot,
-    .package,
-    .tire,
-    .arm-segment,
-    .robot-eye {
-        animation: none;
-    }
+/* humanoid — patrols the mid-ground */
+.humanoid {
+    --patrol: 240px;
+    position: absolute;
+    bottom: 25px;
+    left: 10%;
+    width: 26px;
+    height: 64px;
+    opacity: 0.75;
+    z-index: 1;
+    animation: patrol 22s linear infinite;
+}
+
+.h-head {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 1px solid rgba(129, 140, 248, 0.6);
+    box-shadow: 0 0 8px rgba(129, 140, 248, 0.25);
+}
+
+.h-head::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent-2);
+    box-shadow: 0 0 4px var(--accent-2);
+}
+
+.h-torso {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 16px;
+    height: 24px;
+    margin-left: -8px;
+    border-radius: 5px;
+    background: var(--surface-2);
+    border: 1px solid rgba(129, 140, 248, 0.6);
+}
+
+.h-arm {
+    position: absolute;
+    top: 18px;
+    width: 4px;
+    height: 20px;
+    border-radius: 2px;
+    background: var(--accent-2);
+    transform-origin: top center;
+}
+
+.h-arm-l {
+    left: 2px;
+    animation: limbSwing 0.9s ease-in-out infinite alternate;
+}
+
+.h-arm-r {
+    right: 2px;
+    animation: limbSwing 0.9s ease-in-out infinite alternate-reverse;
+}
+
+.h-leg {
+    position: absolute;
+    top: 40px;
+    width: 5px;
+    height: 24px;
+    border-radius: 2px;
+    background: var(--surface-2);
+    border: 1px solid rgba(129, 140, 248, 0.5);
+    transform-origin: top center;
+}
+
+.h-leg-l {
+    left: 6px;
+    animation: limbSwing 0.9s ease-in-out infinite alternate-reverse;
+}
+
+.h-leg-r {
+    right: 6px;
+    animation: limbSwing 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes limbSwing {
+    from { transform: rotate(20deg); }
+    to { transform: rotate(-20deg); }
+}
+
+@keyframes patrol {
+    0%   { transform: translateX(0) scaleX(1); }
+    46%  { transform: translateX(var(--patrol)) scaleX(1); }
+    50%  { transform: translateX(var(--patrol)) scaleX(-1); }
+    96%  { transform: translateX(0) scaleX(-1); }
+    100% { transform: translateX(0) scaleX(1); }
+}
+
+/* drones — cruise across the sky */
+.drone {
+    position: absolute;
+    left: 0;
+    width: 46px;
+    height: 16px;
+    z-index: 1;
+}
+
+.drone-a {
+    top: 20px;
+    animation: flyRight 26s linear infinite;
+}
+
+.drone-b {
+    top: 48px;
+    transform-origin: center;
+    animation: flyLeft 34s linear infinite;
+    animation-delay: -14s;
+    opacity: 0.8;
+}
+
+.drone-body {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    width: 22px;
+    height: 8px;
+    margin-left: -11px;
+    background: var(--surface-2);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+    border-radius: 4px;
+}
+
+.prop {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(34, 211, 238, 0.8);
+    animation: propSpin 0.18s linear infinite;
+}
+
+.prop-l { left: 1px; }
+.prop-r { right: 1px; }
+
+@keyframes propSpin {
+    0%, 100% { transform: scaleX(1); opacity: 0.9; }
+    50%      { transform: scaleX(0.25); opacity: 0.4; }
+}
+
+.drone-led {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    border-radius: 50%;
+    animation: ledBlink 1.4s steps(1) infinite;
+}
+
+@keyframes ledBlink {
+    0%, 55%   { background: #f87171; box-shadow: 0 0 6px #f87171; }
+    56%, 100% { background: rgba(248, 113, 113, 0.25); box-shadow: none; }
+}
+
+@keyframes flyRight {
+    0%   { transform: translate(-70px, 0); }
+    30%  { transform: translate(calc(min(1100px, 92vw) * 0.3), -10px); }
+    65%  { transform: translate(calc(min(1100px, 92vw) * 0.65), 6px); }
+    100% { transform: translate(calc(min(1100px, 92vw) + 70px), -4px); }
+}
+
+@keyframes flyLeft {
+    0%   { transform: translate(calc(min(1100px, 92vw) + 70px), -4px); }
+    35%  { transform: translate(calc(min(1100px, 92vw) * 0.6), 8px); }
+    70%  { transform: translate(calc(min(1100px, 92vw) * 0.25), -8px); }
+    100% { transform: translate(-70px, 0); }
 }
 
 /* ---------- skills ---------- */
@@ -472,6 +734,24 @@
     margin-bottom: 28px;
 }
 
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .photo-ring,
+    .photo-ring img,
+    .tire,
+    .arm-segment,
+    .robot-eye,
+    .humanoid,
+    .h-arm,
+    .h-leg,
+    .drone,
+    .prop,
+    .drone-led {
+        animation: none;
+    }
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
@@ -503,14 +783,14 @@
 
 @media (max-width: 600px) {
     .robot-scene {
-        height: 130px;
+        height: 190px;
     }
 
-    @keyframes driveRobot {
-        0%   { transform: translateX(0); }
-        38%  { transform: translateX(calc(92vw - 160px)); }
-        55%  { transform: translateX(calc(92vw - 160px)); }
-        93%  { transform: translateX(0); }
-        100% { transform: translateX(0); }
+    .humanoid {
+        --patrol: 110px;
+    }
+
+    .hud-score {
+        display: none;
     }
 }
