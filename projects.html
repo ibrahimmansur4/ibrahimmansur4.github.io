@@ -3,144 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Bin Mansur - Projects</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="project.css">
+    <title>Projects — Ibrahim Bin Mansur</title>
+    <meta name="description" content="Projects by Ibrahim Bin Mansur: robotics, computer vision, ESP32 embedded systems, IoT firmware, and algorithms.">
+    <meta property="og:title" content="Projects — Ibrahim Bin Mansur">
+    <meta property="og:description" content="Robotics, computer vision, ESP32 embedded systems, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahimmansur4.github.io/projects.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-
-<header>
-    <h1>Ibrahim Bin Mansur</h1>
-    <h2>Connect with Me</h2>
-    <div class="social-icons">
-        <a href="https://github.com/ibrahimmansur4" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=ibrahim-bin-mansur-4a7012157" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:ibrahimmansur4@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://ibrahimmansur4.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-    </div> 
-</header>
-
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link">Resume</a>
-    <a href="projects.html">Projects</a>
-    <a href="https://ibrahimmansur4.medium.com/">Blog</a>
-    <a href="cv.html">CV</a>
-</nav>
-
-<section>
-    <h2>Projects</h2>
-    
-    <div class="project-container sliding-effect">
-        <!-- ESP32 Web Server with FreeRTOS -->
-        <div class="project">
-            <h3>ESP32 Web Server with FreeRTOS</h3>
-            <p>Implemented a web server on ESP32, using FreeRTOS for efficient task management.</p>
-            <p><strong>Technologies:</strong> ESP32, FreeRTOS, C++, HTML, CSS, JavaScript, IoT</p>
-            <img src="Images/Screenshot from 2024-01-20 15-50-14.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">
-            <div class="buttons">
-                <a href="https://github.com/ESP32-Work/Embedded-Systems-Semester-Project" target="_blank">GitHub Repo</a>
-                <a href="https://blog.example.com/esp32-web-server" target="_blank">See More</a>
-            </div>
+    <nav class="site-nav">
+        <div class="container">
+            <a class="nav-logo" href="index.html"><span class="bracket">&lt;</span>ibrahim.m<span class="bracket"> /&gt;</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="cv.html">Experience</a></li>
+                <li><a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener">Blog</a></li>
+                <li><a class="nav-cta" href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
         </div>
-        
-        <!-- RF Communication with ESP32 -->
-        <div class="project">
-            <h3>RF Communication with ESP32</h3>
-            <p>Established RF communication between two ESP32 devices using the RadioHead library.</p>
-            <p><strong>Technologies:</strong> ESP32, RadioHead Library</p>
-            <img src="Images/WhatsApp Image 2024-01-20 at 15.58.01.jpeg" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
-            <div class="buttons">
-                <a href="https://github.com/ESP32-Work/RF-Transmitter-Reciever" target="_blank">GitHub Repo</a>
-                <a href="https://blog.example.com/rf-communication-esp32" target="_blank">See More</a>
-            </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">// projects</span>
+            <h1>Things I've Built</h1>
+            <p>Open-source work across robotics, computer vision, embedded systems, and algorithms. Everything here lives on <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener">GitHub</a> — most of the ESP32 work is under the <a href="https://github.com/ESP32-Work" target="_blank" rel="noopener">ESP32-Work</a> organization.</p>
         </div>
+    </header>
 
-        <!-- Text Recognition using ESP32-CAM and OCR -->
-        <div class="project">
-            <h3>Text Recognition using ESP32-CAM and OCR</h3>
-            <p>Used an ESP32-CAM to capture images and perform OCR with Tesseract.</p>
-            <p><strong>Technologies:</strong> ESP32-CAM, PlatformIO, Python, Tesseract OCR, OpenCV</p>
-            <img src="Images/Screenshot from 2024-01-24 17-37-07.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">    
-            <div class="buttons">
-                <a href="https://github.com/ESP32-Work/Text-Recognition-ESP32-CAM" target="_blank">GitHub Repo</a>
-                <a href="https://medium.com/@ibrahimmansur4/building-a-real-time-ocr-system-with-esp32-cam-a-complete-guide-86f40a5312dc?source=your_stories_page-------------------------------------" target="_blank">See More</a>
+    <main>
+        <!-- ============ Robotics & Computer Vision ============ -->
+        <section class="section project-section">
+            <div class="container">
+                <h2 class="section-title reveal"><i class="fas fa-robot"></i>&nbsp;Robotics &amp; Computer Vision</h2>
+                <div class="projects-grid">
+                    <article class="card project-card reveal" id="localization">
+                        <div class="project-top">
+                            <i class="fas fa-location-crosshairs project-icon"></i>
+                            <span class="fyp-badge">Final-Year Project</span>
+                        </div>
+                        <h3>Landmark-Based Localization for Indoor Delivery Robot</h3>
+                        <p>A localization system that lets an indoor delivery robot determine its position using visual landmarks — combining ROS, computer vision, and an ESP32-CAM, with simulation in Gazebo and a QT-based interface.</p>
+                        <ul class="chips">
+                            <li>ROS</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>QT</li>
+                            <li>OpenCV</li>
+                            <li>Gazebo</li>
+                            <li>ESP32-CAM</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/Landmark-based-Localization-for-Indoor-Delivery-Robot" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="ros2">
+                        <div class="project-top">
+                            <i class="fas fa-diagram-project project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 9</span>
+                        </div>
+                        <h3>ROS2 Projects</h3>
+                        <p>A growing collection of ROS2 packages built while exploring modern robotics middleware — nodes, launch systems, and robot behaviors.</p>
+                        <ul class="chips">
+                            <li>ROS2</li>
+                            <li>Python</li>
+                            <li>Robotics</li>
+                            <li>Linux</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/ROS2-Projects" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="hoid">
+                        <div class="project-top">
+                            <i class="fas fa-person-rays project-icon"></i>
+                        </div>
+                        <h3>Human-Object Interaction Detection (HOID)</h3>
+                        <p>A convolutional neural network that detects human-object interactions in images — dataset preparation, model training, and evaluation.</p>
+                        <ul class="chips">
+                            <li>Python</li>
+                            <li>CNN</li>
+                            <li>Keras / TensorFlow</li>
+                            <li>OpenCV</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/HOID" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://medium.com/p/abee033cb918/" target="_blank" rel="noopener"><i class="fab fa-medium-m"></i> Article</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Human-Object Interaction Detection (HOID) -->
-        <div class="project">
-            <h3>Human-Object Interaction Detection (HOID)</h3>
-            <p>Developed a CNN for detecting human-object interactions in images.</p>
-            <p><strong>Technologies:</strong> OpenCV, Machine Learning, CNN, Python3, Keras-TensorFlow</p>
-            <img src="Images/videoframe_2854.png" alt="Project Image 2" style="max-width: 100%;">
-            <div class="buttons">
-                <a href="https://github.com/ibrahimmansur4/HOID" target="_blank">GitHub Repo</a>
-                <a href="https://medium.com/p/abee033cb918/" target="_blank">See More</a>
+        <!-- ============ Embedded & IoT ============ -->
+        <section class="section project-section">
+            <div class="container">
+                <h2 class="section-title reveal"><i class="fas fa-microchip"></i>&nbsp;Embedded &amp; IoT</h2>
+                <div class="projects-grid">
+                    <article class="card project-card reveal" id="ocr">
+                        <div class="project-top">
+                            <i class="fas fa-camera project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 44</span>
+                        </div>
+                        <h3>Text Recognition — ESP32-CAM + OCR</h3>
+                        <p>A real-time OCR pipeline: an ESP32-CAM captures images and streams them to a Python backend where Tesseract extracts the text. My most-starred repository.</p>
+                        <ul class="chips">
+                            <li>ESP32-CAM</li>
+                            <li>PlatformIO</li>
+                            <li>Python</li>
+                            <li>Tesseract OCR</li>
+                            <li>OpenCV</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/Text-Recognition-ESP32-CAM" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://medium.com/@ibrahimmansur4/building-a-real-time-ocr-system-with-esp32-cam-a-complete-guide-86f40a5312dc" target="_blank" rel="noopener"><i class="fab fa-medium-m"></i> Article</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="rf">
+                        <div class="project-top">
+                            <i class="fas fa-tower-broadcast project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 24</span>
+                        </div>
+                        <h3>RF Communication with ESP32</h3>
+                        <p>Reliable point-to-point RF communication between two ESP32 devices using the RadioHead library — transmitter and receiver firmware.</p>
+                        <ul class="chips">
+                            <li>ESP32</li>
+                            <li>C++</li>
+                            <li>RadioHead</li>
+                            <li>RF</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/RF-Transmitter-Reciever" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="webserver">
+                        <div class="project-top">
+                            <i class="fas fa-server project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 21</span>
+                        </div>
+                        <h3>ESP32 Web Server with FreeRTOS</h3>
+                        <p>An IoT web server running on ESP32 with FreeRTOS handling task scheduling — serving a live dashboard while managing sensors concurrently.</p>
+                        <ul class="chips">
+                            <li>ESP32</li>
+                            <li>FreeRTOS</li>
+                            <li>C</li>
+                            <li>IoT</li>
+                            <li>HTML / CSS / JS</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/ESP32-FreeRTOS-Webserver" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="drivers">
+                        <div class="project-top">
+                            <i class="fas fa-gears project-icon"></i>
+                        </div>
+                        <h3>Device Drivers</h3>
+                        <p>A collection of low-level device drivers written in C — hands-on work with peripherals, registers, and communication protocols.</p>
+                        <ul class="chips">
+                            <li>C</li>
+                            <li>Drivers</li>
+                            <li>Embedded</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/Device_Drivers" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="idf">
+                        <div class="project-top">
+                            <i class="fas fa-terminal project-icon"></i>
+                        </div>
+                        <h3>ESP-IDF Projects</h3>
+                        <p>Projects built directly on Espressif's IDF framework — going below Arduino abstractions for finer control of the ESP32.</p>
+                        <ul class="chips">
+                            <li>ESP-IDF</li>
+                            <li>C</li>
+                            <li>ESP32</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/IDF-Projects" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Landmark-based Localization for Indoor Delivery Robot -->
-        <div class="project">
-            <h3>Landmark-based Localization for Indoor Delivery Robot</h3>
-            <p>Developed a localization system for indoor robots using landmarks.</p>
-            <p><strong>Technologies:</strong> ROS, C++, Python, QT, OpenCV, Gazebo, ESP32-CAM, Linux</p>
-            <img src="Images/Screenshot from 2024-04-23 15-30-39.png" alt="Project Screenshot" style="max-width: 100%; height: auto;">
-            <div class="buttons">
-                <a href="https://github.com/ibrahimmansur4/Landmark-based-Localization-for-Indoor-Delivery-Robot" target="_blank">GitHub Repo</a>
-                <a href="https://blog.example.com/landmark-localization" target="_blank">See More</a>
+        <!-- ============ Software & Algorithms ============ -->
+        <section class="section project-section">
+            <div class="container">
+                <h2 class="section-title reveal"><i class="fas fa-code"></i>&nbsp;Software &amp; Algorithms</h2>
+                <div class="projects-grid">
+                    <article class="card project-card reveal" id="routemaster">
+                        <div class="project-top">
+                            <i class="fas fa-route project-icon"></i>
+                        </div>
+                        <h3>RouteMaster</h3>
+                        <p>A route-planning application in C++ that finds the shortest or fastest path between two locations — graph algorithms applied to a practical problem.</p>
+                        <ul class="chips">
+                            <li>C++</li>
+                            <li>Graph Algorithms</li>
+                            <li>Pathfinding</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/RouteMaster" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" id="microprocessor">
+                        <div class="project-top">
+                            <i class="fas fa-memory project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 6</span>
+                        </div>
+                        <h3>4-bit Microprocessor in Verilog</h3>
+                        <p>A 4-bit microprocessor designed from the ground up in Verilog HDL — ALU, registers, and control logic, showing digital design fundamentals.</p>
+                        <ul class="chips">
+                            <li>Verilog</li>
+                            <li>FPGA</li>
+                            <li>Digital Design</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/4-bit-Microprocessor-using-Verilog-HDL" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:ibrahimmansur4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year">2026</span> Ibrahim Bin Mansur. All rights reserved.</p>
+            <p class="footer-mono">designed &amp; built with &lt;/&gt; and ☕</p>
         </div>
-    </div>
-
-    <!-- Navigation buttons -->
-    <div class="nav-buttons">
-        <button class="nav-button" onclick="scrollProjects('left')">&#9665;</button>
-        <button class="nav-button" onclick="scrollProjects('right')">&#9655;</button>
-    </div>
-</section>
-
-<script>
-    // Get the project container
-    const projectContainer = document.querySelector('.project-container');
-
-    // Variables to track touch movement
-    let isTouchStart = false;
-    let startX;
-    let scrollLeft;
-
-    // Add touch event listeners
-    projectContainer.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 2) {
-            isTouchStart = true;
-            startX = e.touches[0].pageX - projectContainer.offsetLeft;
-            scrollLeft = projectContainer.scrollLeft;
-        }
-    });
-
-    projectContainer.addEventListener('touchmove', (e) => {
-        if (!isTouchStart || e.touches.length !== 2) return;
-        e.preventDefault();
-
-        const x = e.touches[0].pageX - projectContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust the multiplier as needed
-        projectContainer.scrollLeft = scrollLeft - walk;
-    });
-
-    projectContainer.addEventListener('touchend', () => {
-        isTouchStart = false;
-    });
-
-    // Function to scroll projects based on button click
-    function scrollProjects(direction) {
-        const step = 250; // Adjust the step size as needed
-        if (direction === 'left') {
-            projectContainer.scrollLeft -= step;
-        } else if (direction === 'right') {
-            projectContainer.scrollLeft += step;
-        }
-    }
-</script>
-
+    </footer>
 </body>
 </html>

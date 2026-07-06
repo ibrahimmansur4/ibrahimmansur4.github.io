@@ -3,121 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Work Experience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="cv.css">
+    <title>Experience — Ibrahim Bin Mansur</title>
+    <meta name="description" content="Work experience of Ibrahim Bin Mansur: embedded systems engineering at Byonyks Medical Devices, IoT firmware at KytherTek, robotics at Robotisim.">
+    <meta property="og:title" content="Experience — Ibrahim Bin Mansur">
+    <meta property="og:description" content="Embedded systems engineering across medical devices, IoT, and robotics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahimmansur4.github.io/cv.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cv.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link">Resume</a>
-        <a href="projects.html">Projects</a>
-        <a href="https://ibrahimmansur4.medium.com/">Blog</a>
-        <a href="cv.html">CV</a>
+    <nav class="site-nav">
+        <div class="container">
+            <a class="nav-logo" href="index.html"><span class="bracket">&lt;</span>ibrahim.m<span class="bracket"> /&gt;</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="cv.html" class="active">Experience</a></li>
+                <li><a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener">Blog</a></li>
+                <li><a class="nav-cta" href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="timeline">
-        <div class="container right">
-            <div class="content">
-                <div class="date">June 2024 - Present</div>
-                <h3>Embedded and IoT Associate Engineer</h3>
-                <div class="company">KytherTek</div>
-                <span class="work-type">Full-time</span>
-                <div class="location"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan · Hybrid</div>
-                <div class="details">
-                    <ul>
-                        <li>Developed a mobile notification system for water tank monitoring in homes</li>
-                        <li>Rolled out updated versions of the ezgeyser gas, electric and hybrid devices for improved efficiency</li>
-                        <li>Lead the final testing phase for the electric and hybrid versions of the ezgeyser device</li>
-                        <li>Added a complete webserver for local connections with mdns support</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <span class="skill-tag">IoT</span>
-                    <span class="skill-tag">Webserver</span>
-                    <span class="skill-tag">MDNS</span>
-                </div>
-            </div>
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">// experience</span>
+            <h1>Where I've Worked</h1>
+            <p>From power plants to robotics labs to regulated medical device development — the path so far.</p>
+            <a href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary resume-btn"><i class="fas fa-file-arrow-down"></i>&nbsp; Download Resume</a>
         </div>
+    </header>
 
-        <div class="container left">
-            <div class="content">
-                <div class="date">March 2024 - May 2024</div>
-                <h3>Embedded and IoT Engineer</h3>
-                <div class="company">KytherTek</div>
-                <span class="work-type">Part-time</span>
-                <div class="location"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan · On-site</div>
-                <div class="details">
-                    <ul>
-                        <li>Improved development of EzGeyser, transforming traditional water geysers into intelligent, connected appliances</li>
-                        <li>Established and organized company's GitHub account, creating repositories for efficient project management</li>
-                        <li>Drove migration of EzGeyser codebase to FreeRTOS operating system</li>
-                        <li>Handled hardware assembly, component integration, and electrical connection testing</li>
-                        <li>Produced comprehensive technical documentation for the EzGeyser system</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <span class="skill-tag">ESP32</span>
-                    <span class="skill-tag">Soldering</span>
-                    <span class="skill-tag">FreeRTOS</span>
-                    <span class="skill-tag">Hardware Assembly</span>
-                </div>
-            </div>
-        </div>
+    <main>
+        <section class="section timeline-section">
+            <div class="container">
+                <div class="timeline">
 
-        <div class="container right">
-            <div class="content">
-                <div class="date">July 2023 - September 2023</div>
-                <h3>Summer Intern</h3>
-                <div class="company">Robotisim</div>
-                <span class="work-type">Internship</span>
-                <div class="location"><i class="fas fa-map-marker-alt"></i> Jhelum, Pakistan · On-site</div>
-                <div class="details">
-                    <ul>
-                        <li>Developed line-following robot prototype using PID control algorithms and IR sensors</li>
-                        <li>Created mobile app using MIT App Inventor for ESP32-based camera system</li>
-                        <li>Integrated AS5600 encoders and IMU sensors with microROS implementation</li>
-                        <li>Collaborated on programming mobile robots and implementing ESP32 cam for security wifi</li>
-                        <li>Utilized GitHub, VS Code, and Linux Ubuntu for development</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <span class="skill-tag">CMake</span>
-                    <span class="skill-tag">microROS</span>
-                    <span class="skill-tag">ROS</span>
-                    <span class="skill-tag">ESP32</span>
-                    <span class="skill-tag">PID</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Gazebo</span>
-                    <span class="skill-tag">Rviz</span>
-                    <span class="skill-tag">Linux</span>
-                </div>
-            </div>
-        </div>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker current"></div>
+                        <div class="card timeline-card">
+                            <span class="timeline-date">May 2025 — Present</span>
+                            <h3>Embedded Systems Engineer</h3>
+                            <p class="timeline-company"><i class="fas fa-heart-pulse"></i> Byonyks Medical Devices</p>
+                            <ul class="timeline-points">
+                                <li>Lead HMI design and development — Qt-based GUI applications for Peritoneal Dialysis systems, aligned with clinical usability requirements and real-world use cases.</li>
+                                <li>Implement C++ application logic and device-control layers, with inter-process communication (IPC) mechanisms for scalable data exchange across system components.</li>
+                                <li>Work on Linux platforms including Jetson Nano — cross-compilation, performance tuning, and system-level optimization.</li>
+                                <li>Integrate hardware and software in a safety-critical environment, ensuring robust and accurate sensor-data handling.</li>
+                                <li>Ensure adherence to IEC&nbsp;62304 and IEC&nbsp;60601 — safety, risk management, and regulatory-compliance best practices.</li>
+                                <li>Conduct software design and code reviews, enforce coding standards, and shape architecture decisions for scalable, maintainable systems.</li>
+                                <li>Build internal tools that streamline development, debugging, and testing workflows.</li>
+                            </ul>
+                            <ul class="chips">
+                                <li>Qt / HMI</li>
+                                <li>C++ / STL</li>
+                                <li>IEC 62304 / 60601</li>
+                                <li>IPC</li>
+                                <li>Linux / Jetson Nano</li>
+                                <li>Code Review</li>
+                            </ul>
+                        </div>
+                    </article>
 
-        <div class="container left">
-            <div class="content">
-                <div class="date">June 2023 - July 2023</div>
-                <h3>Summer Intern</h3>
-                <div class="company">WAPDA</div>
-                <span class="work-type">Internship</span>
-                <div class="location"><i class="fas fa-map-marker-alt"></i> Muzaffarabad, Azad Kashmir, Pakistan · On-site</div>
-                <div class="details">
-                    <ul>
-                        <li>Worked in P&I section (Protection and Instrumentation)</li>
-                        <li>Handled sensor installation and PLC readings in control units</li>
-                        <li>Gained experience with SCADA system implementation and operation</li>
-                        <li>Learned about industrial control systems and power plant operations</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <span class="skill-tag">Line Drawing</span>
-                    <span class="skill-tag">SCADA</span>
-                    <span class="skill-tag">PLC</span>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="card timeline-card">
+                            <span class="timeline-date">Mar 2024 — May 2025</span>
+                            <h3>Embedded &amp; IoT Engineer</h3>
+                            <p class="timeline-company"><i class="fas fa-fire-flame-simple"></i> KytherTek · Islamabad, Pakistan</p>
+                            <ul class="timeline-points">
+                                <li>Led firmware development for the EzGeyser product line — intelligent gas, electric, and hybrid water geysers.</li>
+                                <li>Designed the web dashboard and integrated it with the devices, including a webserver with mDNS support.</li>
+                                <li>Managed and tested new features across all three device variants, leading the final testing phase.</li>
+                                <li>Migrated the codebase to FreeRTOS; built a mobile notification system for water-tank monitoring.</li>
+                                <li>Hands-on hardware assembly, electrical testing, and technical documentation.</li>
+                            </ul>
+                            <ul class="chips">
+                                <li>ESP32</li>
+                                <li>FreeRTOS</li>
+                                <li>IoT</li>
+                                <li>Webserver / mDNS</li>
+                                <li>Hardware Assembly</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="card timeline-card">
+                            <span class="timeline-date">Jul 2023 — Sep 2023</span>
+                            <h3>Summer Intern — Robotics</h3>
+                            <p class="timeline-company"><i class="fas fa-robot"></i> Robotisim · Jhelum, Pakistan</p>
+                            <ul class="timeline-points">
+                                <li>Built a line-following robot with PID control and IR sensors.</li>
+                                <li>Integrated AS5600 encoders and IMU sensors with microROS.</li>
+                                <li>Programmed mobile robots and developed an ESP32-CAM security camera over WiFi.</li>
+                                <li>Developed a companion mobile app with MIT App Inventor.</li>
+                            </ul>
+                            <ul class="chips">
+                                <li>ROS / microROS</li>
+                                <li>PID</li>
+                                <li>ESP32</li>
+                                <li>Gazebo / Rviz</li>
+                                <li>CMake</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="card timeline-card">
+                            <span class="timeline-date">Jun 2023 — Jul 2023</span>
+                            <h3>Summer Intern — Protection &amp; Instrumentation</h3>
+                            <p class="timeline-company"><i class="fas fa-bolt"></i> WAPDA · Muzaffarabad, Pakistan</p>
+                            <ul class="timeline-points">
+                                <li>Worked in the Protection &amp; Instrumentation section of a hydropower plant.</li>
+                                <li>Gained hands-on experience with sensor installation, PLC readings, and SCADA systems.</li>
+                                <li>Learned industrial control systems and power plant operations.</li>
+                            </ul>
+                            <ul class="chips">
+                                <li>SCADA</li>
+                                <li>PLC</li>
+                                <li>Instrumentation</li>
+                            </ul>
+                        </div>
+                    </article>
+
                 </div>
             </div>
+        </section>
+
+        <section class="section education-section">
+            <div class="container">
+                <span class="section-tag reveal">// education</span>
+                <h2 class="section-title reveal">Education</h2>
+                <div class="card education-card reveal">
+                    <span class="education-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <div>
+                        <h3>B.E. Electrical Engineering</h3>
+                        <p class="timeline-company">National University of Sciences and Technology (NUST)</p>
+                        <p class="education-note">Focus on embedded systems, robotics, and control — capstone: landmark-based localization for an indoor delivery robot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:ibrahimmansur4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year">2026</span> Ibrahim Bin Mansur. All rights reserved.</p>
+            <p class="footer-mono">designed &amp; built with &lt;/&gt; and ☕</p>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

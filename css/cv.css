@@ -1,0 +1,183 @@
+/* ============================================================
+   Experience page — page header, timeline, education
+   ============================================================ */
+
+.page-header {
+    padding: calc(var(--nav-height) + 72px) 0 24px;
+    background-image:
+        radial-gradient(ellipse 55% 60% at 50% 0%, rgba(34, 211, 238, 0.07), transparent 70%),
+        radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 28px 28px;
+}
+
+.page-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    max-width: 680px;
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+.resume-btn {
+    margin-bottom: 8px;
+}
+
+/* ---------- timeline ---------- */
+
+.timeline-section {
+    padding-top: 48px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 36px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), rgba(34, 211, 238, 0.08));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -36px;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--accent);
+    margin-left: 2px;
+}
+
+.timeline-marker.current {
+    box-shadow: 0 0 0 5px rgba(34, 211, 238, 0.15), 0 0 14px rgba(34, 211, 238, 0.6);
+    animation: pulseMarker 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseMarker {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12), 0 0 10px rgba(34, 211, 238, 0.45); }
+    50%      { box-shadow: 0 0 0 8px rgba(34, 211, 238, 0.06), 0 0 18px rgba(34, 211, 238, 0.7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-marker.current {
+        animation: none;
+    }
+}
+
+.timeline-date {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.timeline-company {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.timeline-company i {
+    color: var(--accent);
+    margin-right: 6px;
+}
+
+.timeline-points {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.timeline-points li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin-bottom: 8px;
+}
+
+.timeline-points li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* ---------- education ---------- */
+
+.education-section {
+    padding-top: 24px;
+}
+
+.education-card {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    max-width: 720px;
+}
+
+.education-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.education-card h3 {
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.education-card .timeline-company {
+    margin-bottom: 10px;
+}
+
+.education-note {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 28px;
+    }
+
+    .timeline-marker {
+        left: -28px;
+    }
+}

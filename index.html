@@ -3,136 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Bin Mansur - Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <title>Ibrahim Bin Mansur — Embedded Systems Engineer</title>
+    <meta name="description" content="Ibrahim Bin Mansur — Embedded Systems Engineer working across medical device software, robotics, and IoT. Portfolio, projects, and experience.">
+    <meta property="og:title" content="Ibrahim Bin Mansur — Embedded Systems Engineer">
+    <meta property="og:description" content="Medical Device Software · Robotics · IoT. Portfolio, projects, and experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahimmansur4.github.io/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/main.js" defer></script>
 </head>
-<body class="scroll-snap">
-    <header>
-        <h1>Ibrahim Bin Mansur</h1>
-        <h2>Robotics & Embedded Systems Engineer</h2>
-        <p>Turning ideas into reality through innovative hardware and software solutions</p>
-        </section>
-        <nav class="navbar">
-            <ul>
-                <a href="index.html">Home</a>
-                <a href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link">Resume</a>
-                <a href="projects.html">Projects</a>
-                <a href="https://ibrahimmansur4.medium.com/">Blog</a>
-                <a href="cv.html">CV</a>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a class="nav-logo" href="index.html"><span class="bracket">&lt;</span>ibrahim.m<span class="bracket"> /&gt;</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="cv.html">Experience</a></li>
+                <li><a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener">Blog</a></li>
+                <li><a class="nav-cta" href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link" target="_blank" rel="noopener">Resume</a></li>
             </ul>
-        </nav>
-    </header>
-    <section class="hero-section">
-        <div class="hero-content">
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+        <div class="container hero-inner">
             <div class="hero-text">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Explore my work and learn more about my skills and experience.</p>
-                <a href="#connect-with-me" class="btn">Get in Touch</a>
+                <p class="hero-greeting">// hello, world</p>
+                <h1>Ibrahim Bin Mansur</h1>
+                <h2>Embedded Systems Engineer</h2>
+                <p class="hero-typing">&gt; <span data-typing='["Medical Device Software","Robotics","IoT &amp; Firmware"]'>Medical Device Software</span><span class="cursor">▊</span></p>
+                <p class="hero-tagline">I build reliable software for machines that matter — from regulated medical devices to autonomous robots and connected IoT products.</p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="cv.html" class="btn btn-outline">Experience</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                    <a href="mailto:ibrahimmansur4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-            <div class="hero-image"></div>
+            <div class="hero-photo">
+                <div class="photo-ring">
+                    <img src="Images/WhatsApp Image 2023-08-29 at 14.10.50.jpeg" alt="Portrait of Ibrahim Bin Mansur">
+                </div>
+            </div>
         </div>
-    </section>
-    <section class="info-section">
-        <div class="card">
-            <h3>
-                <svg class="icon"><use xlink:href="#icon-code"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-cpp"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-python"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-robot"></use></svg>
-                Technical Skills
-            </h3>
-            <p>Proficient in programming languages such as C, C++, Python. Experienced in working with FPGAs, ESP-32, Arduino.</p>
-        </div>
-    
-        <div class="card">
-            <h3><svg class="icon"><use xlink:href="#icon-project"></use></svg> Projects</h3>
-            <section class="featured-projects">
-                <h2>Featured Projects</h2>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h3>Landmark-based Localization for Indoor Delivery Robot</h3>
-                        <p>Developed a localization system for indoor robots using landmarks.</p>
-                        <p>Technologies: ROS, C++, Python, QT, OpenCV, Gazebo, ESP32-CAM, Linux</p>
-                        <a href="projects.html#project1">Learn More</a>
-                        <a href="https://github.com/ibrahimmansur4/Landmark-based-Localization-for-Indoor-Delivery-Robot" class="btn">GitHub Repo</a>
-                        <a href="https://your-blog-link" class="btn">Blog</a>
+    </header>
+
+    <main>
+        <!-- ================= ABOUT ================= -->
+        <section class="section" id="about">
+            <div class="container">
+                <span class="section-tag reveal">// about</span>
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>I'm an electrical engineer (B.E., <strong>NUST</strong>) who fell in love with the space where software meets hardware. I started out building robots and ESP32-based IoT products, and today I develop software for <strong>medical devices</strong> — Qt-based HMIs and C++ device-control layers for dialysis systems, working within IEC&nbsp;62304 / 60601 processes where design reviews, risk management, and code quality genuinely matter.</p>
+                        <p>Along the way I've written firmware for smart water geysers, built localization systems for indoor delivery robots, trained CNNs to recognize human-object interactions, and put web servers on microcontrollers. I like systems that are intelligent, efficient, and dependable.</p>
+                        <p class="about-hobbies"><span class="mono-label">$ cat hobbies.txt</span><br>Coding, exploring new technologies, continuous learning — and when I'm off the clock: anime, sports, and personal projects.</p>
                     </div>
-                    <div class="project-card">
-                        <h3>Human-Object Interaction Detection (HOID)</h3>
-                        <p>Developed a CNN for detecting human-object interactions in images.</p>
-                        <p>Technologies: OpenCV, Machine Learning, CNN, Python3, Keras-TensorFlow</p>
-                        <a href="projects.html#project2">Learn More</a>
-                        <a href="https://github.com/ibrahimmansur4/HOID" class="btn">GitHub Repo</a>
-                        <a href="https://your-blog-link" class="btn">Blog</a>
+                    <div class="about-facts reveal">
+                        <div class="fact-card card">
+                            <span class="fact-icon"><i class="fas fa-heart-pulse"></i></span>
+                            <h3>Medical Devices</h3>
+                            <p>Qt HMIs and C++ control software for dialysis systems — IEC 62304 / 60601, FMEA &amp; risk management.</p>
+                        </div>
+                        <div class="fact-card card">
+                            <span class="fact-icon"><i class="fas fa-robot"></i></span>
+                            <h3>Robotics</h3>
+                            <p>ROS/ROS2, localization, computer vision, PID control, simulation in Gazebo.</p>
+                        </div>
+                        <div class="fact-card card">
+                            <span class="fact-icon"><i class="fas fa-microchip"></i></span>
+                            <h3>Embedded &amp; IoT</h3>
+                            <p>ESP32, FreeRTOS, ESP-IDF, device drivers, connected product firmware.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    
-        <div class="card">
-            <h3><svg class="icon"><use xlink:href="#icon-education"></use></svg> Education</h3>
-            <p>Completed a Bachelor's degree in Electrical Engineering from NUST.</p>
-        </div>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-code" viewBox="0 0 24 24">
-            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-        </symbol>
-        <symbol id="icon-project" viewBox="0 0 24 24">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(22, 193, 245);transform: ;msFilter:;"><path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h8a.996.996 0 0 0 .707-.293l7-7a.997.997 0 0 0 .196-.293c.014-.03.022-.061.033-.093a.991.991 0 0 0 .051-.259c.002-.021.013-.041.013-.062V5c0-1.103-.897-2-2-2zM5 5h14v7h-6a1 1 0 0 0-1 1v6H5V5zm9 12.586V14h3.586L14 17.586z"></path></svg>
-        </symbol>
-        <symbol id="icon-education" viewBox="0 0 24 24">
-            <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"/>
-        </symbol>
-        <symbol id="icon-cpp" viewBox="0 0 24 24">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(9, 214, 197);transform: ;msFilter:;"><path d="M20.66 7a1.51 1.51 0 0 0-.55-.57l-7.34-4.24a1.67 1.67 0 0 0-1.54 0L3.89 6.43a1.68 1.68 0 0 0-.77 1.33v8.48a1.57 1.57 0 0 0 .22.76 1.51 1.51 0 0 0 .55.57l7.34 4.24a1.67 1.67 0 0 0 1.54 0l7.34-4.24a1.51 1.51 0 0 0 .55-.57 1.57 1.57 0 0 0 .22-.76V7.76a1.57 1.57 0 0 0-.22-.76zM12 17.92A5.92 5.92 0 1 1 17.13 9L16 9.71l-.36.2-1 .61A3 3 0 0 0 9 12a2.88 2.88 0 0 0 .4 1.48 3 3 0 0 0 5.13 0l2.6 1.52A5.94 5.94 0 0 1 12 17.92zm5.92-5.59h-.66V13h-.65v-.66H16v-.66h.66V11h.65v.66h.66zm2.47 0h-.66V13h-.66v-.66h-.65v-.66h.65V11h.66v.66h.66z"></path></svg>
-        </symbol>
-        <symbol id="icon-python" viewBox="0 0 24 24">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(16, 194, 185);transform: ;msFilter:;"><path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554zm-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57z"></path><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451zm-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57z"></path></svg>
-        </symbol>
-        <symbol id="icon-robot" viewBox="0 0 24 24">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.01 430.01" style="enable-background:new 0 0 430.01 430.01" xml:space="preserve"><path style="fill:#ccc" d="M49.56 376.01c-.06 12.17 4.82 23.22 12.76 31.23s18.94 13 31.11 13.06 23.22-4.82 31.23-12.76 13-18.93 13.06-31.1v-.45c-.06-11.99-4.92-22.86-12.76-30.78-7.93-8.02-18.93-13.01-31.11-13.07-11.33-.05-21.67 4.17-29.51 11.16-.59.52-1.17 1.06-1.72 1.61-8.02 7.94-13 18.93-13.06 31.1zm44.02 12.49c-6.78-.03-12.25-5.55-12.22-12.34.03-6.78 5.56-12.25 12.34-12.22 6.78.04 12.25 5.56 12.22 12.34s-5.56 12.26-12.34 12.22z"/><path style="fill:#f73e3e" d="M68.34 177h166.67v51.34H68.34z"/><path style="fill:#f9911e" d="M81.36 376.16c-.03 6.79 5.44 12.31 12.22 12.34 6.78.04 12.31-5.44 12.34-12.22s-5.44-12.3-12.22-12.34c-6.78-.03-12.31 5.44-12.34 12.22z"/><path style="fill:#f73e3e" d="M87.01 280.34h55.92v33.33H87.01z"/><path style="fill:#f73e3e" d="M87.01 265.67h55.92v14.67H87.01zM87.01 249h55.92v16.67H87.01z"/><path style="fill:#e6e6e6" d="m115.53 86.086-35.94 35.94c19.85 19.85 52.04 19.85 71.89 0s19.85-52.04 0-71.89l-35.94 35.95h-.01z"/><path style="fill:#23464f" d="M142.93 265.67h18.74v14.67h-18.74z"/><path style="fill:#23464f" d="M142.93 280.34h18.74v33.33h-18.74z"/><path style="fill:#f73e3e" d="M161.67 280.34h55.93v33.33h-55.93z"/><path style="fill:#f73e3e" d="M161.67 265.67h55.93v14.67h-55.93zM161.67 249h55.93v16.67h-55.93z"/><path style="fill:#ccc" d="M168.68 376.02c-.06 12.17 4.82 23.21 12.76 31.22s18.94 13 31.11 13.06 23.22-4.82 31.23-12.76 13-18.93 13.06-31.1v-.45c-.06-11.99-4.92-22.86-12.76-30.78-7.93-8.02-18.93-13.01-31.11-13.07-12.17-.06-23.22 4.83-31.23 12.77-8.02 7.94-13 18.93-13.06 31.1v.01zm44.02 12.48c-6.78-.03-12.25-5.55-12.22-12.34.03-6.78 5.56-12.25 12.34-12.22 6.78.04 12.25 5.56 12.22 12.34s-5.56 12.26-12.34 12.22z"/><path style="fill:#f9911e" d="M200.48 376.16c-.03 6.79 5.44 12.31 12.22 12.34 6.78.04 12.31-5.44 12.34-12.22s-5.44-12.3-12.22-12.34c-6.78-.03-12.31 5.44-12.34 12.22z"/><path style="fill:#23464f" d="M217.6 313.67h161.16v-85.33H46.76v85.33h40.25V249h55.92v16.67h18.74V249h55.93V280.34z"/><path style="fill:#f73e3e" d="M270.67 207.67v20.67h70.67v-20.67h-51z"/><path style="fill:#ccc" d="M331.67 420.3c12.17.06 23.22-4.82 31.23-12.76s13-18.93 13.06-31.1v-.01c.06-12.17-4.82-23.22-12.76-31.23a38.38 38.38 0 0 0-1.73-1.65c-7.77-7.04-18.06-11.35-29.37-11.41h-.01c-12.17-.05-23.22 4.83-31.23 12.77-8.02 7.94-13 18.93-13.06 31.1v.01c-.06 12.17 4.82 23.21 12.76 31.22s18.94 13 31.11 13.06zm.15-31.8c-6.78-.03-12.25-5.55-12.22-12.34.03-6.78 5.56-12.25 12.34-12.22 6.78.04 12.25 5.56 12.22 12.34s-5.56 12.26-12.34 12.22z"/><path style="fill:#e6e6e6" d="M290.34 42.34h31.33v165.33h-31.33z"/><path style="fill:#f73e3e" d="M290.34 5v37.34h63.33V5z"/><path style="fill:#f9911e" d="M319.6 376.16c-.03 6.79 5.44 12.31 12.22 12.34 6.78.04 12.31-5.44 12.34-12.22s-5.44-12.3-12.22-12.34c-6.78-.03-12.31 5.44-12.34 12.22z"/><path style="fill:#f73e3e" d="M353.67 11.67h19.34v24h-19.34z"/><path style="fill:#999" d="M361.47 313.67H64.34v29.63c7.84-6.99 18.18-11.21 29.51-11.16 12.18.06 23.18 5.05 31.11 13.07 7.84 7.92 12.7 18.79 12.76 30.78l30.96.03v-.01c.06-12.17 5.04-23.16 13.06-31.1 8.01-7.94 19.06-12.83 31.23-12.77 12.18.06 23.18 5.05 31.11 13.07 7.84 7.92 12.7 18.79 12.76 30.78l30.96.03v-.01c.06-12.17 5.04-23.16 13.06-31.1 8.01-7.94 19.06-12.82 31.23-12.77h.01c11.31.06 21.6 4.37 29.37 11.41v-29.88z"/><path style="fill:#333" d="M331.895 425.3h-.249c-13.105-.065-25.406-5.229-34.637-14.54-9.229-9.31-14.274-21.656-14.209-34.765.064-13.12 5.229-25.417 14.542-34.638 9.253-9.172 21.521-14.217 34.56-14.217h.209a49.024 49.024 0 0 1 32.717 12.705c.68.61 1.337 1.238 1.939 1.851a5 5 0 0 1-.062 7.071 4.999 4.999 0 0 1-7.071-.061 33.75 33.75 0 0 0-1.507-1.437 39.044 39.044 0 0 0-26.054-10.128h-.167c-10.389 0-20.157 4.017-27.527 11.322-7.416 7.343-11.528 17.135-11.579 27.573-.052 10.446 3.965 20.275 11.311 27.686 7.352 7.416 17.147 11.529 27.584 11.58 10.427.073 20.274-3.966 27.686-11.311 7.416-7.351 11.528-17.143 11.58-27.574a39.37 39.37 0 0 0-.756-7.894 5 5 0 0 1 9.807-1.957c.646 3.236.965 6.564.949 9.89-.065 13.111-5.229 25.408-14.541 34.637-9.25 9.167-21.503 14.207-34.525 14.207z"/><path style="fill:#333" d="M331.895 393.5h-.104c-9.519-.042-17.232-7.831-17.19-17.362.042-9.499 7.79-17.198 17.284-17.198h.077c9.528.056 17.24 7.845 17.199 17.361a17.165 17.165 0 0 1-5.125 12.203 17.148 17.148 0 0 1-12.141 4.996zm-7.295-17.317c-.018 4.017 3.23 7.299 7.242 7.317h.044a7.222 7.222 0 0 0 5.115-2.103 7.23 7.23 0 0 0 2.159-5.14c.018-4.011-3.235-7.294-7.25-7.317h-.032c-3.995 0-7.261 3.242-7.278 7.243zM331.649 430.01h-.021a5 5 0 0 1-4.979-5.022l.03-7.138a5 5 0 0 1 5-4.98h.021a5 5 0 0 1 4.979 5.02l-.03 7.142a5 5 0 0 1-5 4.978zM332.08 339.58h-.02a5 5 0 0 1-4.98-5.02l.04-7.152a5 5 0 0 1 4.999-4.968h.033a5 5 0 0 1 4.968 5.032l-.04 7.128a5 5 0 0 1-5 4.98zM366.2 415.88a4.99 4.99 0 0 1-3.557-1.485l-5.01-5.06a5 5 0 1 1 7.092-7.05l5.031 5.08a5.001 5.001 0 0 1-3.556 8.515zM302.58 351.64a4.986 4.986 0 0 1-3.545-1.474l-5.032-5.083a5 5 0 1 1 7.113-7.028l5.009 5.058a5.001 5.001 0 0 1-3.545 8.527zM290.239 381.02l-33.404-.03a5 5 0 0 1 .005-10h.005l33.395.03a5 5 0 1 1-.001 10zM380.661 381.46h-.032l-7.131-.04a5.001 5.001 0 0 1 .021-10h.021l7.15.04a5.001 5.001 0 0 1 4.969 5.032 4.999 4.999 0 0 1-4.998 4.968zM361.47 351.92a5 5 0 0 1-3.525-8.547l5.08-5.03a5.001 5.001 0 0 1 7.029 7.113l-5.061 5.01a4.977 4.977 0 0 1-3.523 1.454zM297.22 415.55a5 5 0 0 1-3.52-8.551l5.085-5.035a5 5 0 1 1 7.029 7.113l-5.075 5.024a4.983 4.983 0 0 1-3.519 1.449z"/><path style="fill:#333" d="M212.774 425.3h-.249c-13.105-.065-25.406-5.229-34.637-14.54-9.227-9.309-14.273-21.655-14.209-34.764.064-13.119 5.228-25.416 14.54-34.637 9.256-9.175 21.51-14.219 34.526-14.219h.248c13.122.065 25.425 5.233 34.642 14.554 9.094 9.187 14.139 21.358 14.204 34.27v.466c-.065 13.135-5.229 25.432-14.541 34.661-9.248 9.169-21.501 14.209-34.524 14.209zm-.027-88.16c-10.363 0-20.117 4.016-27.488 11.322l-.002.002c-7.414 7.341-11.526 17.133-11.577 27.571-.051 10.447 3.966 20.275 11.311 27.686 7.352 7.416 17.147 11.529 27.584 11.58h.198c10.37 0 20.123-4.012 27.486-11.311 7.417-7.351 11.529-17.143 11.581-27.574v-.425c-.052-10.254-4.069-19.945-11.313-27.262-7.339-7.421-17.133-11.536-27.581-11.587-.066-.002-.133-.002-.199-.002z"/><path style="fill:#333" d="M212.775 393.5h-.104c-9.518-.042-17.232-7.831-17.191-17.361v-.001c.042-9.499 7.79-17.198 17.284-17.198h.077c9.528.056 17.24 7.845 17.199 17.361a17.17 17.17 0 0 1-5.125 12.204 17.147 17.147 0 0 1-12.14 4.995zm-7.296-17.317c-.017 4.017 3.232 7.299 7.243 7.317 1.953-.005 3.775-.736 5.157-2.103a7.228 7.228 0 0 0 2.16-5.14c.018-4.011-3.235-7.294-7.25-7.317h-.032c-3.994 0-7.26 3.242-7.278 7.243zM212.529 430.01h-.021a5 5 0 0 1-4.979-5.022l.03-7.138a5 5 0 0 1 5-4.98h.021a5 5 0 0 1 4.979 5.02l-.03 7.142a5 5 0 0 1-5 4.978zM212.96 339.58h-.02a5 5 0 0 1-4.98-5.02l.04-7.152a5 5 0 0 1 4.999-4.968h.033a5 5 0 0 1 4.968 5.032l-.04 7.128a5 5 0 0 1-5 4.98zM247.08 415.88a4.99 4.99 0 0 1-3.557-1.485l-5.01-5.06a5 5 0 1 1 7.092-7.05l5.031 5.08a5.001 5.001 0 0 1-3.556 8.515zM183.46 351.64a4.986 4.986 0 0 1-3.545-1.474l-5.032-5.083a5 5 0 1 1 7.113-7.028l5.009 5.058a5.001 5.001 0 0 1-3.545 8.527zM171.12 381.02l-33.405-.03a5 5 0 0 1 .005-10h.005l33.396.03a5 5 0 1 1-.001 10zM261.541 381.46h-.032l-7.131-.04a5.001 5.001 0 0 1 .021-10h.021l7.15.04a5 5 0 0 1-.029 10zM242.35 351.92a5.001 5.001 0 0 1-3.515-8.557l5.065-5.015a5 5 0 1 1 7.039 7.103l-5.075 5.025a4.984 4.984 0 0 1-3.514 1.444zM178.1 415.55a5 5 0 0 1-3.52-8.551l5.085-5.035a5 5 0 1 1 7.029 7.113l-5.075 5.024a4.983 4.983 0 0 1-3.519 1.449z"/><path style="fill:#333" d="M93.654 425.3h-.249c-13.105-.065-25.406-5.229-34.637-14.54-9.228-9.309-14.273-21.658-14.209-34.774.065-13.111 5.23-25.409 14.543-34.628a42.267 42.267 0 0 1 1.931-1.808 48.95 48.95 0 0 1 32.619-12.41h.22c13.124.065 25.427 5.233 34.644 14.554 9.095 9.188 14.14 21.359 14.204 34.271v.465c-.064 13.133-5.228 25.43-14.54 34.661-9.25 9.169-21.503 14.209-34.526 14.209zM54.56 376.034c-.051 10.443 3.966 20.275 11.311 27.686 7.352 7.416 17.147 11.529 27.584 11.58h.198c10.369 0 20.123-4.012 27.488-11.312 7.416-7.351 11.528-17.144 11.579-27.573v-.426c-.051-10.253-4.068-19.944-11.313-27.262-7.339-7.421-17.133-11.536-27.581-11.587h-.175a38.98 38.98 0 0 0-25.983 9.892c-.559.493-1.06.962-1.51 1.413-7.434 7.358-11.547 17.15-11.598 27.589z"/><path style="fill:#333" d="M93.655 393.5h-.104c-9.518-.042-17.232-7.831-17.191-17.361v-.001c.042-9.499 7.79-17.198 17.285-17.198h.077c9.529.056 17.24 7.845 17.198 17.362a17.169 17.169 0 0 1-5.125 12.203 17.149 17.149 0 0 1-12.14 4.995zm-7.296-17.317c-.017 4.017 3.232 7.299 7.243 7.317h.044a7.216 7.216 0 0 0 5.113-2.103 7.228 7.228 0 0 0 2.16-5.14c.018-4.011-3.234-7.294-7.249-7.317h-.032c-3.995 0-7.261 3.242-7.279 7.243zM93.4 430.01h-.033a5 5 0 0 1-4.968-5.032l.04-7.127a5 5 0 0 1 5-4.98h.021a5 5 0 0 1 4.979 5.02l-.04 7.152a5 5 0 0 1-4.999 4.967zM93.84 339.58h-.02a5 5 0 0 1-4.98-5.02l.04-7.152a5 5 0 0 1 4.999-4.968h.033a5 5 0 0 1 4.968 5.032l-.04 7.128a5 5 0 0 1-5 4.98zM127.96 415.88a4.984 4.984 0 0 1-3.557-1.486l-5.009-5.058a5.001 5.001 0 0 1 7.09-7.052l5.032 5.082a5 5 0 0 1-3.556 8.514zM64.34 351.64a4.987 4.987 0 0 1-3.546-1.475l-5.031-5.081a5.001 5.001 0 0 1 7.113-7.029l5.01 5.06a5 5 0 0 1-3.546 8.525zM52 381.02h-.021l-7.141-.03a5.001 5.001 0 0 1 .021-10h.021l7.141.03a5.001 5.001 0 0 1-.021 10zM142.421 381.46h-.032l-7.131-.04a5.001 5.001 0 0 1 .021-10h.021l7.15.04a5 5 0 0 1-.029 10zM123.229 351.92a5.001 5.001 0 0 1-3.515-8.557l5.065-5.015a5 5 0 1 1 7.039 7.103l-5.075 5.025a4.98 4.98 0 0 1-3.514 1.444zM58.979 415.55a5 5 0 0 1-3.52-8.551l5.065-5.025a5 5 0 0 1 7.049 7.093l-5.075 5.035a4.984 4.984 0 0 1-3.519 1.448zM383.76 313.67h-10v-80.33h-32.42v-10h37.42a5 5 0 0 1 5 5v85.33zM235.01 223.34h35.66v10h-35.66zM51.76 313.67h-10v-85.33a5 5 0 0 1 5-5h21.58v10H51.76v80.33zM285.34 42.34h10v165.33h-10zM321.67 212.67a5 5 0 0 1-5-5V92.337a5 5 0 1 1 10 0V207.67a5 5 0 0 1-5 5zM321.67 78.67a5 5 0 0 1-5-5V42.34a5 5 0 1 1 10 0v31.33a5 5 0 0 1-5 5z"/><path style="fill:#333" d="M341.34 233.34h-70.67a5 5 0 0 1-5-5v-20.67a5 5 0 0 1 5-5h70.67a5 5 0 0 1 5 5v20.67a5 5 0 0 1-5 5zm-65.67-10h60.67v-10.67h-60.67v10.67zM353.67 16.67a5 5 0 0 1-5-5V10h-24.997a5 5 0 1 1 0-10h29.997a5 5 0 0 1 5 5v6.67a5 5 0 0 1-5 5z"/><path style="fill:#333" d="M353.67 47.34h-63.33a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5h16a5 5 0 1 1 0 10h-11v27.34h53.33v-1.67a5 5 0 1 1 10 0v6.67a5 5 0 0 1-5 5zM235.01 233.34H68.34a5 5 0 0 1-5-5V177a5 5 0 0 1 5-5h127.333a5 5 0 1 1 0 10H73.34v41.34h156.67V182h-17.67a5 5 0 1 1 0-10h22.67a5 5 0 0 1 5 5v51.34a5 5 0 0 1-5 5zM115.535 141.914c-14.915 0-28.937-5.808-39.48-16.352a5 5 0 0 1 0-7.071l35.939-35.94a5 5 0 0 1 7.07 7.071L86.85 121.837c8.107 6.53 18.123 10.077 28.685 10.077 12.243 0 23.753-4.767 32.409-13.423 8.656-8.656 13.423-20.166 13.423-32.409s-4.767-23.753-13.423-32.409a5 5 0 1 1 7.07-7.071c10.545 10.545 16.353 24.566 16.353 39.48 0 14.915-5.808 28.936-16.353 39.48-10.543 10.544-24.565 16.352-39.479 16.352z"/><path style="fill:#333" d="M115.54 91.086a5 5 0 0 1-3.536-8.535l22.271-22.278a5 5 0 0 1 7.072 7.07l-22.271 22.278a4.984 4.984 0 0 1-3.536 1.465z"/><path style="fill:#fff" d="M142.287 116.833a3.999 3.999 0 0 1-2.828-6.828c9.991-9.992 12.71-25.333 6.765-38.174a4 4 0 0 1 7.26-3.362c7.349 15.873 3.986 34.838-8.368 47.192a3.985 3.985 0 0 1-2.829 1.172z"/><path style="fill:#333" d="M115.54 91.086h-.011a4.998 4.998 0 0 1-3.537-1.466l-14.05-14.06a5.001 5.001 0 0 1 7.074-7.069l13.956 13.966a4.983 4.983 0 0 1 1.562 3.628 4.995 4.995 0 0 1-4.994 5.001zM407.67 318.67h-46.2a5 5 0 1 1 0-10h46.2a5 5 0 1 1 0 10zM64.34 318.67h-42a5 5 0 1 1 0-10h42a5 5 0 1 1 0 10z"/><path style="fill:#333" d="M361.47 348.55a5 5 0 0 1-5-5v-24.88h-62.796a5 5 0 1 1 0-10h67.796a5 5 0 0 1 5 5v29.88a5 5 0 0 1-5 5zM280.34 318.67h-7.334a5 5 0 1 1 0-10h7.334a5 5 0 1 1 0 10zM258.34 318.67H217.6a5 5 0 1 1 0-10h40.74a5 5 0 1 1 0 10zM161.67 318.67h-18.74a5 5 0 1 1 0-10h18.74a5 5 0 1 1 0 10zM64.34 348.3a5 5 0 0 1-5-5v-29.63a5 5 0 0 1 5-5h22.67a5 5 0 1 1 0 10H69.34v24.63a5 5 0 0 1-5 5z"/><path style="fill:#333" d="M142.93 318.67H87.01a5 5 0 0 1-5-5V249a5 5 0 0 1 5-5h55.92a5 5 0 0 1 5 5v64.67a5 5 0 0 1-5 5zm-50.92-10h45.92V254H92.01v54.67zM217.6 318.67h-55.93a5 5 0 0 1-5-5V249a5 5 0 0 1 5-5h55.93a5 5 0 0 1 5 5v64.67a5 5 0 0 1-5 5zm-50.93-10h45.93V254h-45.93v54.67zM373.01 40.67h-19.34a5 5 0 0 1-5-5v-24a5 5 0 0 1 5-5h19.34a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5zm-14.34-10h9.34v-14h-9.34v14z"/><path style="fill:#fff" d="M362.673 299.67a4 4 0 0 1-4-4v-8.667a4 4 0 0 1 8 0v8.667a4 4 0 0 1-4 4zM362.673 273.003a4 4 0 0 1-4-4V243.67a4 4 0 0 1 8 0v25.333a4 4 0 0 1-4 4zM310.34 191.67a4 4 0 0 1-4-4v-132a4 4 0 0 1 8 0v132a4 4 0 0 1-4 4zM219.673 212.34a4 4 0 0 1-4-4v-18.67a4 4 0 0 1 8 0v18.67a4 4 0 0 1-4 4zM340.34 32.005a4 4 0 0 1-4-4v-8.67a4 4 0 0 1 8 0v8.67a4 4 0 0 1-4 4zM205.673 306.67a4 4 0 0 1-4-4v-42.34a4 4 0 0 1 8 0v42.34a4 4 0 0 1-4 4zM130.673 306.67a4 4 0 0 1-4-4v-42.34a4 4 0 0 1 8 0v42.34a4 4 0 0 1-4 4z"/><path style="fill:#333" d="M226.64 270.67H77.97a5 5 0 1 1 0-10h148.67a5 5 0 1 1 0 10zM226.64 285.34H77.97a5 5 0 1 1 0-10h148.67a5 5 0 1 1 0 10zM176.673 182h-47a5.001 5.001 0 0 1-4.648-6.844l21.807-54.974a5 5 0 0 1 4.518-3.155l.131-.001a5 5 0 0 1 4.545 2.917l25.193 54.974a5.001 5.001 0 0 1-4.546 7.083zm-39.638-10h31.847l-17.071-37.25L137.035 172z"/></svg>
-        </symbol>
-    </svg>
-    <section>
-   <section>
-        <h2>About Me</h2>
-        <p>Welcome to my personal website! I am an electrical engineer with a passion for robotics and embedded systems. Here, you can learn more about me, my hobbies, and my current projects.</p>
-        <p>I'm a passionate embedded systems and robotics engineer with expertise in microcontroller programming, sensor integration, robotic control systems. My goal is to create intelligent and efficient systems that push the boundaries of what's possible in automation and robotics.</p>
 
-        <h2>Hobbies</h2>
-        <p>I enjoy coding, exploring new technologies, and continuous learning. In my free time, you can find me watching anime, playing sports, or working on personal projects.</p>
-    
-        <h2 id="connect-with-me">Connect with Me</h2>
-        <div class="social-icons">
-            <a href="https://github.com/ibrahimmansur4" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=ibrahim-bin-mansur-4a7012157" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:ibrahimmansur4@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://ibrahimmansur4.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-            
-        </div>
-    </section>
-    <div class="left-animation"></div>
-    <div class="right-animation"></div>
-    <div class="scene">
-        <div class="robot">
-            <div class="car-body">
-                <div class="tire tire-left"></div>
-                <div class="tire tire-right"></div>
+                <!-- signature robot animation -->
+                <div class="robot-scene reveal" aria-hidden="true">
+                    <div class="robot">
+                        <div class="robot-arm">
+                            <div class="arm-segment"></div>
+                            <div class="arm-joint"></div>
+                        </div>
+                        <div class="robot-body">
+                            <span class="robot-eye"></span>
+                            <div class="tire tire-left"></div>
+                            <div class="tire tire-right"></div>
+                        </div>
+                        <div class="package"></div>
+                    </div>
+                    <div class="drop-box"></div>
+                    <div class="scene-floor"></div>
+                </div>
             </div>
-            <div class="robotic-arm">
-                <div class="arm-base"></div>
-                <div class="arm-joint"></div>
-                <div class="arm-segment"></div>
-                <div class="package"></div>
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section class="section" id="skills">
+            <div class="container">
+                <span class="section-tag reveal">// skills</span>
+                <h2 class="section-title reveal">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="card skill-card reveal">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <ul class="chips">
+                            <li>C</li>
+                            <li>C++ / STL</li>
+                            <li>Python</li>
+                            <li>Shell Scripting</li>
+                            <li>Verilog</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3><i class="fas fa-microchip"></i> Embedded</h3>
+                        <ul class="chips">
+                            <li>ESP32</li>
+                            <li>FreeRTOS</li>
+                            <li>ESP-IDF</li>
+                            <li>Jetson Nano</li>
+                            <li>Device Drivers</li>
+                            <li>IPC</li>
+                            <li>FPGA</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3><i class="fas fa-robot"></i> Robotics &amp; CV</h3>
+                        <ul class="chips">
+                            <li>ROS / ROS2</li>
+                            <li>OpenCV</li>
+                            <li>Gazebo</li>
+                            <li>PID Control</li>
+                            <li>microROS</li>
+                            <li>TensorFlow / Keras</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3><i class="fas fa-heart-pulse"></i> Medical Device Process</h3>
+                        <ul class="chips">
+                            <li>IEC 62304</li>
+                            <li>IEC 60601</li>
+                            <li>FMEA</li>
+                            <li>Risk Management</li>
+                            <li>Design Reviews</li>
+                            <li>Code Reviews</li>
+                            <li>HMI / Usability</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3><i class="fas fa-toolbox"></i> Tools</h3>
+                        <ul class="chips">
+                            <li>Linux</li>
+                            <li>Qt</li>
+                            <li>Git / GitHub</li>
+                            <li>CMake</li>
+                            <li>Cross-compilation</li>
+                            <li>PlatformIO</li>
+                            <li>SCADA / PLC</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- ================= FEATURED PROJECTS ================= -->
+        <section class="section" id="featured">
+            <div class="container">
+                <span class="section-tag reveal">// projects</span>
+                <h2 class="section-title reveal">Featured Projects</h2>
+                <div class="featured-grid">
+                    <article class="card project-card reveal">
+                        <div class="project-top">
+                            <i class="fas fa-camera project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 44</span>
+                        </div>
+                        <h3>Text Recognition — ESP32-CAM + OCR</h3>
+                        <p>Real-time OCR system: an ESP32-CAM captures images and Tesseract extracts the text. My most-starred open-source project.</p>
+                        <ul class="chips">
+                            <li>ESP32-CAM</li>
+                            <li>Python</li>
+                            <li>Tesseract</li>
+                            <li>OpenCV</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ESP32-Work/Text-Recognition-ESP32-CAM" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://medium.com/@ibrahimmansur4/building-a-real-time-ocr-system-with-esp32-cam-a-complete-guide-86f40a5312dc" target="_blank" rel="noopener"><i class="fab fa-medium-m"></i> Article</a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-top">
+                            <i class="fas fa-location-crosshairs project-icon"></i>
+                        </div>
+                        <h3>Landmark-Based Indoor Robot Localization</h3>
+                        <p>Final-year project: a localization system that lets an indoor delivery robot find its way using visual landmarks.</p>
+                        <ul class="chips">
+                            <li>ROS</li>
+                            <li>C++</li>
+                            <li>OpenCV</li>
+                            <li>Gazebo</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/Landmark-based-Localization-for-Indoor-Delivery-Robot" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-top">
+                            <i class="fas fa-robot project-icon"></i>
+                            <span class="star-badge"><i class="fas fa-star"></i> 9</span>
+                        </div>
+                        <h3>ROS2 Projects</h3>
+                        <p>A growing collection of ROS2 packages I've built while exploring modern robotics middleware.</p>
+                        <ul class="chips">
+                            <li>ROS2</li>
+                            <li>Python</li>
+                            <li>Robotics</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ibrahimmansur4/ROS2-Projects" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="see-all reveal">
+                    <a href="projects.html" class="btn btn-outline">See all projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section" id="contact">
+            <div class="container contact-inner">
+                <span class="section-tag reveal">// contact</span>
+                <h2 class="section-title reveal">Get In Touch</h2>
+                <p class="contact-text reveal">Whether it's a role, a collaboration, or just a question about embedded systems — my inbox is open.</p>
+                <div class="reveal">
+                    <a href="mailto:ibrahimmansur4@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i>&nbsp; Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:ibrahimmansur4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year">2026</span> Ibrahim Bin Mansur. All rights reserved.</p>
+            <p class="footer-mono">designed &amp; built with &lt;/&gt; and ☕</p>
         </div>
-    </div>
-    <div class="box"></div>
-    <footer>
-        <p>© 2024 Ibrahim Bin Mansur. All rights reserved.</p>
     </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</body> 
+</body>
 </html>
