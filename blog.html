@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Ibrahim Bin Mansur</title>
+    <meta name="description" content="Notes and articles by Ibrahim Bin Mansur on embedded systems, robotics, medical device firmware, and computer vision.">
+    <meta property="og:title" content="Blog — Ibrahim Bin Mansur">
+    <meta property="og:description" content="Notes on embedded systems, robotics, and medical device firmware.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahimmansur4.github.io/blog.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/vendor/marked.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/blog.js" defer></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a class="nav-logo" href="index.html"><span class="bracket">&lt;</span>ibrahim.m<span class="bracket"> /&gt;</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="cv.html">Experience</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a class="nav-cta" href="https://drive.google.com/file/d/1tvfHzja0QL5wkNAJDC2sSyYmDnbYnC5J/view?usp=drive_link" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">// blog</span>
+            <h1>Notes &amp; Articles</h1>
+            <p>Build notes, debugging stories, and things I've learned working on embedded systems and robotics. Longer guides live on <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener">Medium</a>.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ On-site posts (list view) ============ -->
+        <section class="section blog-section" id="postListView">
+            <div class="container">
+                <h2 class="section-title reveal"><i class="fas fa-pen-nib"></i>&nbsp;Posts</h2>
+                <div class="blog-search reveal">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <input type="search" id="postSearch" placeholder="Search posts by title or tag..." aria-label="Search posts">
+                </div>
+                <div class="post-list" id="postList"></div>
+                <p class="post-list-status" id="postListStatus" hidden>No posts match your search.</p>
+            </div>
+        </section>
+
+        <!-- ============ Reader view (shown via ?post=slug) ============ -->
+        <section class="section blog-section" id="postReaderView" hidden>
+            <div class="container post-reader">
+                <a class="back-link" href="blog.html"><i class="fas fa-arrow-left"></i> All posts</a>
+                <div class="post-meta" id="postMeta"></div>
+                <article class="post-body" id="postBody"></article>
+            </div>
+        </section>
+
+        <!-- ============ Medium articles ============ -->
+        <section class="section blog-section" id="mediumSection">
+            <div class="container">
+                <h2 class="section-title reveal"><i class="fab fa-medium"></i>&nbsp;On Medium</h2>
+                <div class="medium-grid">
+                    <article class="card medium-card reveal">
+                        <i class="fas fa-camera medium-icon"></i>
+                        <h3>Building a Real-Time OCR System with ESP32-CAM — A Complete Guide</h3>
+                        <p>The full walkthrough behind my most-starred repository: streaming images from an ESP32-CAM to a Python backend for text extraction with Tesseract.</p>
+                        <a href="https://medium.com/@ibrahimmansur4/building-a-real-time-ocr-system-with-esp32-cam-a-complete-guide-86f40a5312dc" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </article>
+                    <article class="card medium-card reveal">
+                        <i class="fas fa-person-rays medium-icon"></i>
+                        <h3>Human-Object Interaction Detection (HOID)</h3>
+                        <p>Training a convolutional neural network to detect human-object interactions in images — dataset preparation, model design, and evaluation.</p>
+                        <a href="https://medium.com/p/abee033cb918/" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </article>
+                </div>
+                <div class="medium-more reveal">
+                    <a class="btn btn-outline" href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener">View all on Medium</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/ibrahimmansur4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ibrahim-bin-mansur-4a7012157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://ibrahimmansur4.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:ibrahimmansur4@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year">2026</span> Ibrahim Bin Mansur. All rights reserved.</p>
+            <p class="footer-mono">designed &amp; built with &lt;/&gt; and ☕</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[
+    {
+        "slug": "hello-world",
+        "title": "Hello, World: Why I'm Blogging On-Site",
+        "date": "2026-07-06",
+        "tags": ["meta", "web"],
+        "summary": "Kicking off an on-site blog: plain Markdown files, no build step, no CMS. Here's how this page works under the hood."
+    }
+]
